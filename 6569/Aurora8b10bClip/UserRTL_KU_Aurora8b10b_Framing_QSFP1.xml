@@ -1,0 +1,1426 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- National Instruments recommends that you do not change this CLIP declaration file outside of the Configure Component-Level IP wizard. You can modify this declaration file on the Component-Level IP page of the FPGA Target Properties dialog box. -->
+
+
+
+<CLIPDeclaration Name="UserRTL_KU_Aurora8b10b_Framing_QSFP1">
+  <FormatVersion>4.3</FormatVersion>
+  <Description/>
+ 	<TopLevelEntityAndArchitecture>
+		  <SynthesisModel>
+			   <Entity>UserRTL_KU_Aurora8b10b_Framing_QSFP1</Entity>
+			   <Architecture>rtl</Architecture>
+		  </SynthesisModel>
+    <SimulationModel>
+		   <Entity>UserRTL_KU_Aurora8b10b_Framing_QSFP1</Entity>
+		   <Architecture>rtl</Architecture>
+</SimulationModel>
+ 	</TopLevelEntityAndArchitecture>
+  <CompatibleCLIPSocketList>
+    <Socket>FlexRIO MGT QSFP Port 1 v1</Socket>
+</CompatibleCLIPSocketList>
+  <SupportedDeviceFamilies>Kintex-UltraScale
+</SupportedDeviceFamilies>
+  
+  <InterfaceList>
+    <Interface Name="LabVIEW">
+      <InterfaceType>LabVIEW</InterfaceType>
+      <SignalList>
+        <Signal Name="aResetSl">
+          <HDLName>aResetSl</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="cPort1_reset">
+          <HDLName>cPort1_reset</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="cLane0_link_reset_out">
+          <HDLName>cLane0_link_reset_out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="cLane1_link_reset_out">
+          <HDLName>cLane1_link_reset_out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="cLane2_link_reset_out">
+          <HDLName>cLane2_link_reset_out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="cLane3_link_reset_out">
+          <HDLName>cLane3_link_reset_out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="aUserClkReset">
+          <HDLName>aUserClkReset</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="aInitClkReset">
+          <HDLName>aInitClkReset</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_HardError">
+          <HDLName>uLane0_HardError</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_SoftError">
+          <HDLName>uLane0_SoftError</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_LaneUp">
+          <HDLName>uLane0_LaneUp</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_ChannelUp">
+          <HDLName>uLane0_ChannelUp</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_sys_reset_out">
+          <HDLName>uLane0_sys_reset_out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_Loopback">
+          <HDLName>uLane0_Loopback</HDLName>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>3</WordLength>
+              <IntegerWordLength>3</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_HardError">
+          <HDLName>uLane1_HardError</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_SoftError">
+          <HDLName>uLane1_SoftError</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_LaneUp">
+          <HDLName>uLane1_LaneUp</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_ChannelUp">
+          <HDLName>uLane1_ChannelUp</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_sys_reset_out">
+          <HDLName>uLane1_sys_reset_out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_Loopback">
+          <HDLName>uLane1_Loopback</HDLName>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>3</WordLength>
+              <IntegerWordLength>3</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_HardError">
+          <HDLName>uLane2_HardError</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_SoftError">
+          <HDLName>uLane2_SoftError</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_LaneUp">
+          <HDLName>uLane2_LaneUp</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_ChannelUp">
+          <HDLName>uLane2_ChannelUp</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_sys_reset_out">
+          <HDLName>uLane2_sys_reset_out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_Loopback">
+          <HDLName>uLane2_Loopback</HDLName>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>3</WordLength>
+              <IntegerWordLength>3</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_HardError">
+          <HDLName>uLane3_HardError</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_SoftError">
+          <HDLName>uLane3_SoftError</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_LaneUp">
+          <HDLName>uLane3_LaneUp</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_ChannelUp">
+          <HDLName>uLane3_ChannelUp</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_sys_reset_out">
+          <HDLName>uLane3_sys_reset_out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_Loopback">
+          <HDLName>uLane3_Loopback</HDLName>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>3</WordLength>
+              <IntegerWordLength>3</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="UserClk0">
+          <HDLName>UserClk0</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>clock</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+  
+          <DutyCycleRange>
+            <PercentInHighMax>50.000000</PercentInHighMax>
+            <PercentInHighMin>50.000000</PercentInHighMin>
+</DutyCycleRange>
+          <AccuracyInPPM>100.000000</AccuracyInPPM>
+          <JitterInPicoSeconds>150.000000</JitterInPicoSeconds>
+
+
+          <FreqInHertz>
+            <Max>200.000000M</Max>
+            <Min>1.000000M</Min>
+</FreqInHertz>
+
+</Signal>
+        <Signal Name="UserClk1">
+          <HDLName>UserClk1</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>clock</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+  
+          <DutyCycleRange>
+            <PercentInHighMax>50.000000</PercentInHighMax>
+            <PercentInHighMin>50.000000</PercentInHighMin>
+</DutyCycleRange>
+          <AccuracyInPPM>100.000000</AccuracyInPPM>
+          <JitterInPicoSeconds>150.000000</JitterInPicoSeconds>
+
+
+          <FreqInHertz>
+            <Max>200.000000M</Max>
+            <Min>1.000000M</Min>
+</FreqInHertz>
+
+</Signal>
+        <Signal Name="UserClk2">
+          <HDLName>UserClk2</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>clock</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+  
+          <DutyCycleRange>
+            <PercentInHighMax>50.000000</PercentInHighMax>
+            <PercentInHighMin>50.000000</PercentInHighMin>
+</DutyCycleRange>
+          <AccuracyInPPM>100.000000</AccuracyInPPM>
+          <JitterInPicoSeconds>150.000000</JitterInPicoSeconds>
+
+
+          <FreqInHertz>
+            <Max>200.000000M</Max>
+            <Min>1.000000M</Min>
+</FreqInHertz>
+
+</Signal>
+        <Signal Name="UserClk3">
+          <HDLName>UserClk3</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>clock</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+  
+          <DutyCycleRange>
+            <PercentInHighMax>50.000000</PercentInHighMax>
+            <PercentInHighMin>50.000000</PercentInHighMin>
+</DutyCycleRange>
+          <AccuracyInPPM>100.000000</AccuracyInPPM>
+          <JitterInPicoSeconds>150.000000</JitterInPicoSeconds>
+
+
+          <FreqInHertz>
+            <Max>200.000000M</Max>
+            <Min>1.000000M</Min>
+</FreqInHertz>
+
+</Signal>
+        <Signal Name="uLane0_s_axi_tx_tdata">
+          <HDLName>uLane0_s_axi_tx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_s_axi_tx_tkeep">
+          <HDLName>uLane0_s_axi_tx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_s_axi_tx_tlast">
+          <HDLName>uLane0_s_axi_tx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_s_axi_tx_tvalid">
+          <HDLName>uLane0_s_axi_tx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_s_axi_tx_tready">
+          <HDLName>uLane0_s_axi_tx_tready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_s_axi_ufc_tx_tvalid">
+          <HDLName>uLane0_s_axi_ufc_tx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_s_axi_ufc_tx_tdata">
+          <HDLName>uLane0_s_axi_ufc_tx_tdata</HDLName>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>3</WordLength>
+              <IntegerWordLength>3</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_s_axi_ufc_tx_tready">
+          <HDLName>uLane0_s_axi_ufc_tx_tready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_s_axi_tx_tdata">
+          <HDLName>uLane1_s_axi_tx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_s_axi_tx_tkeep">
+          <HDLName>uLane1_s_axi_tx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_s_axi_tx_tlast">
+          <HDLName>uLane1_s_axi_tx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_s_axi_tx_tvalid">
+          <HDLName>uLane1_s_axi_tx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_s_axi_tx_tready">
+          <HDLName>uLane1_s_axi_tx_tready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_s_axi_ufc_tx_tvalid">
+          <HDLName>uLane1_s_axi_ufc_tx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_s_axi_ufc_tx_tdata">
+          <HDLName>uLane1_s_axi_ufc_tx_tdata</HDLName>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>3</WordLength>
+              <IntegerWordLength>3</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_s_axi_ufc_tx_tready">
+          <HDLName>uLane1_s_axi_ufc_tx_tready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_s_axi_tx_tdata">
+          <HDLName>uLane2_s_axi_tx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_s_axi_tx_tkeep">
+          <HDLName>uLane2_s_axi_tx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_s_axi_tx_tlast">
+          <HDLName>uLane2_s_axi_tx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_s_axi_tx_tvalid">
+          <HDLName>uLane2_s_axi_tx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_s_axi_tx_tready">
+          <HDLName>uLane2_s_axi_tx_tready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_s_axi_ufc_tx_tvalid">
+          <HDLName>uLane2_s_axi_ufc_tx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_s_axi_ufc_tx_tdata">
+          <HDLName>uLane2_s_axi_ufc_tx_tdata</HDLName>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>3</WordLength>
+              <IntegerWordLength>3</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_s_axi_ufc_tx_tready">
+          <HDLName>uLane2_s_axi_ufc_tx_tready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_s_axi_tx_tdata">
+          <HDLName>uLane3_s_axi_tx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_s_axi_tx_tkeep">
+          <HDLName>uLane3_s_axi_tx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_s_axi_tx_tlast">
+          <HDLName>uLane3_s_axi_tx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_s_axi_tx_tvalid">
+          <HDLName>uLane3_s_axi_tx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_s_axi_tx_tready">
+          <HDLName>uLane3_s_axi_tx_tready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_s_axi_ufc_tx_tvalid">
+          <HDLName>uLane3_s_axi_ufc_tx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_s_axi_ufc_tx_tdata">
+          <HDLName>uLane3_s_axi_ufc_tx_tdata</HDLName>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>3</WordLength>
+              <IntegerWordLength>3</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_s_axi_ufc_tx_tready">
+          <HDLName>uLane3_s_axi_ufc_tx_tready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_m_axi_rx_tdata">
+          <HDLName>uLane0_m_axi_rx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_m_axi_rx_tkeep">
+          <HDLName>uLane0_m_axi_rx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_m_axi_rx_tlast">
+          <HDLName>uLane0_m_axi_rx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_m_axi_rx_tvalid">
+          <HDLName>uLane0_m_axi_rx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_m_axi_ufc_rx_tdata">
+          <HDLName>uLane0_m_axi_ufc_rx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_m_axi_ufc_rx_tkeep">
+          <HDLName>uLane0_m_axi_ufc_rx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_m_axi_ufc_rx_tvalid">
+          <HDLName>uLane0_m_axi_ufc_rx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane0_m_axi_ufc_rx_tlast">
+          <HDLName>uLane0_m_axi_ufc_rx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk0</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_m_axi_rx_tdata">
+          <HDLName>uLane1_m_axi_rx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_m_axi_rx_tkeep">
+          <HDLName>uLane1_m_axi_rx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_m_axi_rx_tlast">
+          <HDLName>uLane1_m_axi_rx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_m_axi_rx_tvalid">
+          <HDLName>uLane1_m_axi_rx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_m_axi_ufc_rx_tdata">
+          <HDLName>uLane1_m_axi_ufc_rx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_m_axi_ufc_rx_tkeep">
+          <HDLName>uLane1_m_axi_ufc_rx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_m_axi_ufc_rx_tvalid">
+          <HDLName>uLane1_m_axi_ufc_rx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane1_m_axi_ufc_rx_tlast">
+          <HDLName>uLane1_m_axi_ufc_rx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk1</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_m_axi_rx_tdata">
+          <HDLName>uLane2_m_axi_rx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_m_axi_rx_tkeep">
+          <HDLName>uLane2_m_axi_rx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_m_axi_rx_tlast">
+          <HDLName>uLane2_m_axi_rx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_m_axi_rx_tvalid">
+          <HDLName>uLane2_m_axi_rx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_m_axi_ufc_rx_tdata">
+          <HDLName>uLane2_m_axi_ufc_rx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_m_axi_ufc_rx_tkeep">
+          <HDLName>uLane2_m_axi_ufc_rx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_m_axi_ufc_rx_tvalid">
+          <HDLName>uLane2_m_axi_ufc_rx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane2_m_axi_ufc_rx_tlast">
+          <HDLName>uLane2_m_axi_ufc_rx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk2</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_m_axi_rx_tdata">
+          <HDLName>uLane3_m_axi_rx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_m_axi_rx_tkeep">
+          <HDLName>uLane3_m_axi_rx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_m_axi_rx_tlast">
+          <HDLName>uLane3_m_axi_rx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_m_axi_rx_tvalid">
+          <HDLName>uLane3_m_axi_rx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_m_axi_ufc_rx_tdata">
+          <HDLName>uLane3_m_axi_ufc_rx_tdata</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_m_axi_ufc_rx_tkeep">
+          <HDLName>uLane3_m_axi_ufc_rx_tkeep</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <FXP>
+              <WordLength>4</WordLength>
+              <IntegerWordLength>4</IntegerWordLength>
+              <Unsigned/>
+</FXP>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_m_axi_ufc_rx_tvalid">
+          <HDLName>uLane3_m_axi_ufc_rx_tvalid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="uLane3_m_axi_ufc_rx_tlast">
+          <HDLName>uLane3_m_axi_ufc_rx_tlast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <RequiredClockDomain>UserClk3</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+      </SignalList>
+    </Interface>
+    <Interface Name="Socket">
+      <InterfaceType>Socket</InterfaceType>
+      <SignalList>
+        <Signal Name="Qsfp1SocketClk80">
+          <HDLName>Qsfp1SocketClk80</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="Qsfp1MgtRefClk_p">
+          <HDLName>Qsfp1MgtRefClk_p</HDLName>
+          <HDLType>std_logic_vector(1 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Array>
+              <Boolean/>
+              <Size>2</Size>
+</Array>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="Qsfp1MgtRefClk_n">
+          <HDLName>Qsfp1MgtRefClk_n</HDLName>
+          <HDLType>std_logic_vector(1 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Array>
+              <Boolean/>
+              <Size>2</Size>
+</Array>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="Qsfp1MgtRx_p">
+          <HDLName>Qsfp1MgtRx_p</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Array>
+              <Boolean/>
+              <Size>4</Size>
+</Array>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="Qsfp1MgtRx_n">
+          <HDLName>Qsfp1MgtRx_n</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Array>
+              <Boolean/>
+              <Size>4</Size>
+</Array>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="Qsfp1MgtTx_p">
+          <HDLName>Qsfp1MgtTx_p</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Array>
+              <Boolean/>
+              <Size>4</Size>
+</Array>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+        <Signal Name="Qsfp1MgtTx_n">
+          <HDLName>Qsfp1MgtTx_n</HDLName>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Array>
+              <Boolean/>
+              <Size>4</Size>
+</Array>
+  </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop></Signal>
+  </SignalList>
+</Interface>
+  </InterfaceList>
+  <ImplementationList>
+    <Path Name="UserRTL_KU_Aurora8b10b_Framing_QSFP1.vhd">
+      <TopLevel/>
+      <MD5>34defc6795304f3f7563f5982139e918</MD5>
+      <SimulationFileList>
+        <SimulationModelType>Same as synthesis</SimulationModelType>
+    </SimulationFileList> 
+</Path>
+    <Path Name="aurora_8b10b_DF.edf">
+  
+      <MD5>54d88ff7ff534b4434752cbd506d85ee</MD5>
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+    </SimulationFileList> 
+</Path>
+    <Path Name="KU_Aurora8b10bClip_4x1Lanes_QSFP1.xdc">
+  
+      <MD5>20ce0abdec3b3cd15a3055cea9b2aeb4</MD5>
+      <SimulationFileList>
+        <SimulationModelType>Same as synthesis</SimulationModelType>
+    </SimulationFileList> 
+</Path>
+</ImplementationList>
+  <NumberOfDCMsNeeded>0</NumberOfDCMsNeeded>
+  <NumberOfMMCMsNeeded>0</NumberOfMMCMsNeeded>
+  <NumberOfBufGsNeeded>0</NumberOfBufGsNeeded>
+  
+
+
+</CLIPDeclaration>
