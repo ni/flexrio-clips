@@ -1,19 +1,21 @@
 -------------------------------------------------------------------------------
 --
 -- File: PkgAXI4Lite_GTYE4_Control.vhd
--- Author: Brandon Griffith
--- Original Project: Kintex UltraScale+ KCU116 emulation
+-- Author: National Instruments
+-- Original Project:
 -- Date: 1 November 2017
 --
 -------------------------------------------------------------------------------
--- (c) 2017 Copyright National Instruments Corporation
--- All Rights Reserved
--- National Instruments Internal Information
+-- (c) 2025 Copyright National Instruments Corporation
+-- 
+-- SPDX-License-Identifier: MIT
 -------------------------------------------------------------------------------
 --
 -- Purpose: This package is used by the AXI4Lite_GTYE4_Control_Regs component.
 --
 -------------------------------------------------------------------------------
+--
+-- githubvisible=true
 
 library ieee;
   use ieee.std_logic_1164.all;
