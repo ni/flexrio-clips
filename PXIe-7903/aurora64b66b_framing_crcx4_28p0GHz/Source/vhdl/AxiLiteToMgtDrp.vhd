@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 -- File: AxiLiteToMgtDrp.vhd
--- Author: National Instruments
--- Workspace: 
+-- Author: Minghui Zhang
+-- Workspace: Sasquatch
 -- Date: 25 August 2022
 -------------------------------------------------------------------------------
--- (c) 2025 Copyright National Instruments Corporation
+-- Copyright (c) 2025 National Instruments Corporation
 -- 
 -- SPDX-License-Identifier: MIT
 -------------------------------------------------------------------------------
@@ -12,7 +12,8 @@
 -- with AXI cross clock domain.
 -------------------------------------------------------------------------------
 --
--- githubvisible=true
+-- githubvisibledep=true
+--
 
 library ieee;
   use ieee.std_logic_1164.all;
