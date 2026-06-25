@@ -4,7 +4,7 @@
 -- Workspace: PXIe-7903 HSS
 -- Date: 26 August 2022
 -------------------------------------------------------------------------------
--- (c) 2025 Copyright National Instruments Corporation
+-- Copyright (c) 2025 National Instruments Corporation
 -- 
 -- SPDX-License-Identifier: MIT
 -------------------------------------------------------------------------------
@@ -24,7 +24,13 @@
 --
 -------------------------------------------------------------------------------
 --
--- githubvisible=true
+-- githubvisibledep=true
+--
+-- vreview_group Ni7903AuroraStreamingVhdl
+-- vreview_closed http://review-board.natinst.com/r/332238/
+-- vreview_reviewers kygreen dhearn amoch
+--
+-------------------------------------------------------------------------------
 
 
 library ieee;
