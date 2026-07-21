@@ -6,7 +6,7 @@
 -- Date: 02 June 2022
 --
 -------------------------------------------------------------------------------
--- Copyright (c) 2025 National Instruments Corporation
+-- (c) 2025 Copyright National Instruments Corporation
 -- 
 -- SPDX-License-Identifier: MIT
 -------------------------------------------------------------------------------
@@ -15,9 +15,7 @@
 --   This module instantiates all the logic to implement one 100GbE core
 --
 -------------------------------------------------------------------------------
---
--- githubvisibledep=true
---
+
 
 library ieee;
   use ieee.std_logic_1164.all;
