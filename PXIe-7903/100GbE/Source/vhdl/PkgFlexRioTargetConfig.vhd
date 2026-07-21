@@ -6,9 +6,9 @@
 -- Date: 13 February 2015
 --
 ------------------------------------------------------------------------------------------
--- Copyright (c) 2025 National Instruments Corporation
--- 
--- SPDX-License-Identifier: MIT
+-- (c) 2025 Copyright National Instruments Corporation
+-- All Rights Reserved
+-- National Instruments Internal Information
 ------------------------------------------------------------------------------------------
 --
 -- Purpose: This package contains configuration information that describes a given
@@ -16,8 +16,6 @@
 -- multiple backends.
 --
 ------------------------------------------------------------------------------------------
---
--- githubvisible=true
 --
 -- vreview_group TargetConfig
 -- vreview_closed http://review-board.natinst.com/r/328688/

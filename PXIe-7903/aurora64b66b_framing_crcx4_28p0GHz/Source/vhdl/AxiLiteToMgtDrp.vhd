@@ -1,19 +1,17 @@
 -------------------------------------------------------------------------------
 -- File: AxiLiteToMgtDrp.vhd
--- Author: Minghui Zhang
--- Workspace: Sasquatch
+-- Author: National Instruments
+-- Workspace: 
 -- Date: 25 August 2022
 -------------------------------------------------------------------------------
--- Copyright (c) 2025 National Instruments Corporation
+-- (c) 2025 Copyright National Instruments Corporation
 -- 
 -- SPDX-License-Identifier: MIT
 -------------------------------------------------------------------------------
 -- Purpose: This component wraps AXI Lite interface to MGT's DRP interface
 -- with AXI cross clock domain.
 -------------------------------------------------------------------------------
---
--- githubvisibledep=true
---
+
 
 library ieee;
   use ieee.std_logic_1164.all;

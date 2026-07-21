@@ -6,7 +6,7 @@
 -- Date: 02 June 2022
 --
 -------------------------------------------------------------------------------
--- Copyright (c) 2025 National Instruments Corporation
+-- (c) 2025 Copyright National Instruments Corporation
 -- 
 -- SPDX-License-Identifier: MIT
 -------------------------------------------------------------------------------
@@ -18,9 +18,7 @@
 -- accessable. These are ports 0, 2, 3, 8, 10, and 11 on the front panel.
 --
 -------------------------------------------------------------------------------
---
--- githubvisibledep=true
---
+
 
 library ieee;
   use ieee.std_logic_1164.all;
