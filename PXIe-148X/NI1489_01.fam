@@ -1,0 +1,21 @@
+[Common]
+FormatVersion=3
+OldestCompatibleFormatVersion=3
+Manufacturer=National Instruments
+Model=NI 1489-01
+ModelPrettyName=NI 1489 4 In
+Description=4 Input GMSL3 Module
+IoModuleID=0x10937AE7
+CompatibleCLIPSockets=FlexRIOIoSocketType4_v1
+ConditionalDisableSymbols=MODEL_ALIAS,1489_4I;NUM_SI_CHANS,4;NUM_SO_CHANS,0;DATAPATH_SIZE,64;
+
+[FlexRIOIoSocketType4_v1]
+DefaultCLIP=NI 1489 4 In CLIP
+SupportedIoModRefClocks=CLK100
+DefaultIoModRefClock=CLK100
+
+[FlexRIOIoSocketType4_v1 Vivado Constraints]
+File=NI1489_01.xdc
+
+[PortDirectionMapping]
+GPIO{0..45}=in

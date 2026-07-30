@@ -1,0 +1,275 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <style type="text/css">
+
+      body {
+        margin: 5px;
+        font-family: verdana, "Trebuchet MS", arial, helvetica, sans-serif;
+        font-size: 80%;
+        line-height: 1.3;
+      }
+
+      @media print {
+        body {
+          margin: 0px;
+          font-family: arial, helvetica, sans-serif;
+          font-size: 80%;
+          line-height: 1;
+        }
+      }        div.nav {
+          font-size: 95%;
+        }
+        
+        div.sh {
+          display: none;
+          margin-left: 15px;
+        }
+        
+        div.shr {
+          display: block;
+          margin-left: 15px;
+        }
+        
+        div.nav span.pm, div.nav span.pm_2 {
+          color: black;
+          font-family: courier new, courier;
+          margin-right: 5px;
+        }
+        
+        div.nav span.pm {
+          cursor: pointer;
+        }
+        
+        div.nav p {
+          margin: 0px;
+          padding: 0px;
+          white-space: nowrap;
+        }
+        
+        div.nav span {
+          cursor: pointer;
+        }
+        
+        div.nav span.regmap {
+          color: #000080;
+        }
+        
+        div.nav span.group {
+          color: #006000;
+        }
+        
+        div.nav span.enum {
+          color: #800000;
+          margin-left: 10px;
+        }
+        
+        div.nav span.register {
+          color: #004040;
+          margin-left: 10px;
+        }      
+      </style>
+      <script type="text/javascript">
+      
+        function toggleText( id, sign ) {
+          if (sign == "nochange") return;
+          if ( document.getElementById )
+            elem = document.getElementById( id );
+          else if ( document.all )
+            elem = eval( "document.all." + id );
+          if (elem) {
+            elemStyle = elem.style;
+            if (sign=="+") {
+              elemStyle.display = "block"
+            } else {
+              elemStyle.display = "none"
+            }
+            /*if ( elemStyle.display == "block" ) {
+              elemStyle.display = "none"
+            } else {
+              elemStyle.display = "block"
+            }*/
+          }
+        }        
+        function changePm( id ) {
+          if ( document.getElementById )
+            elem = document.getElementById( id );
+          else if ( document.all )
+            elem = eval( "document.all." + id );
+          else
+            return "nochange";
+          var val = elem.innerHTML;
+          if (val == "+") {
+            elem.innerHTML = "-";
+          } else {
+            elem.innerHTML = "+";
+          }
+          return val;
+        }
+        
+        function pm( id ) {
+          var sign = changePm("pm_" + id);
+          toggleText("div_" + id, sign);
+        }
+        
+        function a( id ) {
+          var currentURL= document.URL;
+          var targetURL = currentURL.replace("_left", "_right");
+          parent.frames[1].location = targetURL + '#' + id;
+        }  
+    </script>
+  </head>
+  <body>    
+    <div class="nav">    
+    <p>
+      <span class="pm" id="pm_nessieandjessieclip" onclick="pm('nessieandjessieclip');">+</span>
+      <span class="regmap" id="a_nessieandjessieclip" onclick="a('nessieandjessieclip');">nessieandjessieclip</span>
+    </p>
+    <div class="sh" id="div_nessieandjessieclip">      
+      <p>        
+        <span class="pm" id="pm_P1 Content" onclick="pm('P1 Content');">+</span>      
+        <span class="group" id="a_P1 Content" onclick="a('P1 Content');">P1 Content</span>
+      </p>
+      <div class="sh" id="div_P1 Content">      
+      </div>    
+    </div>    
+    <p>
+      <span class="pm" id="pm_CfgGpio" onclick="pm('CfgGpio');">-</span>
+      <span class="regmap" id="a_CfgGpio" onclick="a('CfgGpio');">CfgGpio</span>
+    </p>    <div class="shr" id="div_CfgGpio">      
+      <p>        
+        <span class="pm" id="pm_CfgGpio|Config GPIO" onclick="pm('CfgGpio|Config GPIO');">+</span>      
+        <span class="group" id="a_CfgGpio|Config GPIO" onclick="a('CfgGpio|Config GPIO');">Config GPIO</span>
+      </p>
+      <div class="sh" id="div_CfgGpio|Config GPIO">        
+        <p><span class="register" id="a_CfgGpio|ResetCtrl" onclick="a('CfgGpio|ResetCtrl');">ResetCtrl</span></p>        
+        <p><span class="register" id="a_CfgGpio|InterruptStatus" onclick="a('CfgGpio|InterruptStatus');">InterruptStatus</span></p>      
+      </div>      
+      <p>        
+        <span class="pm" id="pm_CfgGpio|Config Status" onclick="pm('CfgGpio|Config Status');">+</span>      
+        <span class="group" id="a_CfgGpio|Config Status" onclick="a('CfgGpio|Config Status');">Config Status</span>
+      </p>
+      <div class="sh" id="div_CfgGpio|Config Status">        
+        <p><span class="register" id="a_CfgGpio|FamReady" onclick="a('CfgGpio|FamReady');">FamReady</span></p>        
+        <p><span class="register" id="a_CfgGpio|FamError" onclick="a('CfgGpio|FamError');">FamError</span></p>      
+      </div>    
+    </div>    
+    <p>
+      <span class="pm" id="pm_TimingEngine" onclick="pm('TimingEngine');">-</span>
+      <span class="regmap" id="a_TimingEngine" onclick="a('TimingEngine');">TimingEngine</span>
+    </p>    <div class="shr" id="div_TimingEngine">      
+      <p>        
+        <span class="pm" id="pm_TimingEngine|ClockEnables" onclick="pm('TimingEngine|ClockEnables');">+</span>      
+        <span class="group" id="a_TimingEngine|ClockEnables" onclick="a('TimingEngine|ClockEnables');">ClockEnables</span>
+      </p>
+      <div class="sh" id="div_TimingEngine|ClockEnables">        
+        <p><span class="register" id="a_TimingEngine|ClockControl" onclick="a('TimingEngine|ClockControl');">ClockControl</span></p>        
+        <p><span class="register" id="a_TimingEngine|ClkStatus" onclick="a('TimingEngine|ClkStatus');">ClkStatus</span></p>      
+      </div>      
+      <p>        
+        <span class="pm" id="pm_TimingEngine|MMCM" onclick="pm('TimingEngine|MMCM');">+</span>      
+        <span class="group" id="a_TimingEngine|MMCM" onclick="a('TimingEngine|MMCM');">MMCM</span>
+      </p>
+      <div class="sh" id="div_TimingEngine|MMCM">        
+        <p><span class="register" id="a_TimingEngine|PllControl" onclick="a('TimingEngine|PllControl');">PllControl</span></p>        
+        <p><span class="register" id="a_TimingEngine|PllStatus" onclick="a('TimingEngine|PllStatus');">PllStatus</span></p>      
+      </div>    
+    </div>    
+    <p>
+      <span class="pm" id="pm_Jesd204bRegs" onclick="pm('Jesd204bRegs');">-</span>
+      <span class="regmap" id="a_Jesd204bRegs" onclick="a('Jesd204bRegs');">Jesd204bRegs</span>
+    </p>    <div class="shr" id="div_Jesd204bRegs">      
+      <p>        
+        <span class="pm" id="pm_Jesd204bRegs|JESD Clocking and Reset" onclick="pm('Jesd204bRegs|JESD Clocking and Reset');">+</span>      
+        <span class="group" id="a_Jesd204bRegs|JESD Clocking and Reset" onclick="a('Jesd204bRegs|JESD Clocking and Reset');">JESD Clocking and Reset</span>
+      </p>
+      <div class="sh" id="div_Jesd204bRegs|JESD Clocking and Reset">        
+        <p><span class="register" id="a_Jesd204bRegs|GthQpllStatus" onclick="a('Jesd204bRegs|GthQpllStatus');">GthQpllStatus</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|GthQpllStickyControl" onclick="a('Jesd204bRegs|GthQpllStickyControl');">GthQpllStickyControl</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|GthQpllStickyStatus" onclick="a('Jesd204bRegs|GthQpllStickyStatus');">GthQpllStickyStatus</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|JesdClockingControl" onclick="a('Jesd204bRegs|JesdClockingControl');">JesdClockingControl</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|JesdClockingStatus" onclick="a('Jesd204bRegs|JesdClockingStatus');">JesdClockingStatus</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|GthResetControl" onclick="a('Jesd204bRegs|GthResetControl');">GthResetControl</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|GthResetStatus" onclick="a('Jesd204bRegs|GthResetStatus');">GthResetStatus</span></p>      
+      </div>      
+      <p>        
+        <span class="pm" id="pm_Jesd204bRegs|JESD Control and Status" onclick="pm('Jesd204bRegs|JESD Control and Status');">+</span>      
+        <span class="group" id="a_Jesd204bRegs|JESD Control and Status" onclick="a('Jesd204bRegs|JESD Control and Status');">JESD Control and Status</span>
+      </p>
+      <div class="sh" id="div_Jesd204bRegs|JESD Control and Status">        
+        <p><span class="register" id="a_Jesd204bRegs|JesdControl" onclick="a('Jesd204bRegs|JesdControl');">JesdControl</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|JesdSyncControl" onclick="a('Jesd204bRegs|JesdSyncControl');">JesdSyncControl</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|JesdSyncStatus" onclick="a('Jesd204bRegs|JesdSyncStatus');">JesdSyncStatus</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|JesdLaneAlignmentStatusAndControl" onclick="a('Jesd204bRegs|JesdLaneAlignmentStatusAndControl');">JesdLaneAlignmentStatusAndControl</span></p>        
+        <p><span class="register" id="a_Jesd204bRegs|JesdErrorStatus" onclick="a('Jesd204bRegs|JesdErrorStatus');">JesdErrorStatus</span></p>      
+      </div>    
+    </div>    
+    <p>
+      <span class="pm" id="pm_StdRegs" onclick="pm('StdRegs');">-</span>
+      <span class="regmap" id="a_StdRegs" onclick="a('StdRegs');">StdRegs</span>
+    </p>    <div class="shr" id="div_StdRegs">      
+      <p>        
+        <span class="pm" id="pm_StdRegs|Standard Registers" onclick="pm('StdRegs|Standard Registers');">+</span>      
+        <span class="group" id="a_StdRegs|Standard Registers" onclick="a('StdRegs|Standard Registers');">Standard Registers</span>
+      </p>
+      <div class="sh" id="div_StdRegs|Standard Registers">        
+        <p><span class="register" id="a_StdRegs|SignatureReg" onclick="a('StdRegs|SignatureReg');">SignatureReg</span></p>        
+        <p><span class="register" id="a_StdRegs|FpgaBuildDate" onclick="a('StdRegs|FpgaBuildDate');">FpgaBuildDate</span></p>        
+        <p><span class="register" id="a_StdRegs|OldestCompatReg" onclick="a('StdRegs|OldestCompatReg');">OldestCompatReg</span></p>        
+        <p><span class="register" id="a_StdRegs|Scratch" onclick="a('StdRegs|Scratch');">Scratch</span></p>      
+      </div>    
+    </div>    
+    <p>
+      <span class="pm" id="pm_IoSocketAxiBridgeRegs" onclick="pm('IoSocketAxiBridgeRegs');">-</span>
+      <span class="regmap" id="a_IoSocketAxiBridgeRegs" onclick="a('IoSocketAxiBridgeRegs');">IoSocketAxiBridgeRegs</span>
+    </p>    <div class="shr" id="div_IoSocketAxiBridgeRegs">      
+      <p>        
+        <span class="pm" id="pm_IoSocketAxiBridgeRegs|Regmap Organization" onclick="pm('IoSocketAxiBridgeRegs|Regmap Organization');">+</span>      
+        <span class="group" id="a_IoSocketAxiBridgeRegs|Regmap Organization" onclick="a('IoSocketAxiBridgeRegs|Regmap Organization');">Regmap Organization</span>
+      </p>
+      <div class="sh" id="div_IoSocketAxiBridgeRegs|Regmap Organization">        
+        <p><span class="enum" id="a_IoSocketAxiBridgeRegs|AxiBridgeRangesEnum" onclick="a('IoSocketAxiBridgeRegs|AxiBridgeRangesEnum');">enum AxiBridgeRangesEnum</span></p>      
+      </div>      
+      <p>        
+        <span class="pm" id="pm_IoSocketAxiBridgeRegs|FixedLogicToClipRam" onclick="pm('IoSocketAxiBridgeRegs|FixedLogicToClipRam');">+</span>      
+        <span class="group" id="a_IoSocketAxiBridgeRegs|FixedLogicToClipRam" onclick="a('IoSocketAxiBridgeRegs|FixedLogicToClipRam');">FixedLogicToClipRam</span>
+      </p>
+      <div class="sh" id="div_IoSocketAxiBridgeRegs|FixedLogicToClipRam">        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamSerialNumber" onclick="a('IoSocketAxiBridgeRegs|FamSerialNumber');">FamSerialNumber</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamHwInformation" onclick="a('IoSocketAxiBridgeRegs|FamHwInformation');">FamHwInformation</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamID" onclick="a('IoSocketAxiBridgeRegs|FamID');">FamID</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamPower12v" onclick="a('IoSocketAxiBridgeRegs|FamPower12v');">FamPower12v</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamPower1v8" onclick="a('IoSocketAxiBridgeRegs|FamPower1v8');">FamPower1v8</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamSensorValue1" onclick="a('IoSocketAxiBridgeRegs|FamSensorValue1');">FamSensorValue1</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamSensorValue2" onclick="a('IoSocketAxiBridgeRegs|FamSensorValue2');">FamSensorValue2</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamSensorValue3" onclick="a('IoSocketAxiBridgeRegs|FamSensorValue3');">FamSensorValue3</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamSensorValue4" onclick="a('IoSocketAxiBridgeRegs|FamSensorValue4');">FamSensorValue4</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamSensorValue5" onclick="a('IoSocketAxiBridgeRegs|FamSensorValue5');">FamSensorValue5</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamSensorValue6" onclick="a('IoSocketAxiBridgeRegs|FamSensorValue6');">FamSensorValue6</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamSensorValue7" onclick="a('IoSocketAxiBridgeRegs|FamSensorValue7');">FamSensorValue7</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamSensorValue8" onclick="a('IoSocketAxiBridgeRegs|FamSensorValue8');">FamSensorValue8</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|CarrierSerialNumber" onclick="a('IoSocketAxiBridgeRegs|CarrierSerialNumber');">CarrierSerialNumber</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|CarrierInformation" onclick="a('IoSocketAxiBridgeRegs|CarrierInformation');">CarrierInformation</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|CarrierPower12v" onclick="a('IoSocketAxiBridgeRegs|CarrierPower12v');">CarrierPower12v</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|CarrierPower3v3" onclick="a('IoSocketAxiBridgeRegs|CarrierPower3v3');">CarrierPower3v3</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|CarrierTemperature" onclick="a('IoSocketAxiBridgeRegs|CarrierTemperature');">CarrierTemperature</span></p>      
+      </div>      
+      <p>        
+        <span class="pm" id="pm_IoSocketAxiBridgeRegs|ClipToFixedLogicRegs" onclick="pm('IoSocketAxiBridgeRegs|ClipToFixedLogicRegs');">+</span>      
+        <span class="group" id="a_IoSocketAxiBridgeRegs|ClipToFixedLogicRegs" onclick="a('IoSocketAxiBridgeRegs|ClipToFixedLogicRegs');">ClipToFixedLogicRegs</span>
+      </p>
+      <div class="sh" id="div_IoSocketAxiBridgeRegs|ClipToFixedLogicRegs">      
+      </div>      
+      <p>        
+        <span class="pm" id="pm_IoSocketAxiBridgeRegs|BridgeSharedKnowledge" onclick="pm('IoSocketAxiBridgeRegs|BridgeSharedKnowledge');">+</span>      
+        <span class="group" id="a_IoSocketAxiBridgeRegs|BridgeSharedKnowledge" onclick="a('IoSocketAxiBridgeRegs|BridgeSharedKnowledge');">BridgeSharedKnowledge</span>
+      </p>
+      <div class="sh" id="div_IoSocketAxiBridgeRegs|BridgeSharedKnowledge">        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|ExpectedFamId" onclick="a('IoSocketAxiBridgeRegs|ExpectedFamId');">ExpectedFamId</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|FamStatus" onclick="a('IoSocketAxiBridgeRegs|FamStatus');">FamStatus</span></p>        
+        <p><span class="register" id="a_IoSocketAxiBridgeRegs|ClipCapabilities" onclick="a('IoSocketAxiBridgeRegs|ClipCapabilities');">ClipCapabilities</span></p>      
+      </div>    
+    </div>
+    </div>
+  </body>
+</HTML>

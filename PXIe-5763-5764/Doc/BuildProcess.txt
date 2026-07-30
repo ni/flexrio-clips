@@ -1,0 +1,16 @@
+
+This HW Design uses a microblaze located at /KUxx/Source/Common/xilinxIp/FamConfig. See:
+//Misc/users/dhearn/MicroblazeBuildScripts/export/1.0/1.0.0d3/Doc/MicroblazeTutorial.htm 
+for instructions on how to edit and update the microblaze.
+
+1. Open and build the Xilinx SDK project at /KUxx/Source/Common/xilinxIp/FamConfig/Source/c
+2. Open a command window and run /Tools/BuildClips.bat
+
+If you modify the register map you will need to follow the following steps before building the SDK project:
+
+1. Open a command window at /KUxx/Source/Jessie
+2. run hwsetup
+3. run xmlparse
+4. Open a command window and run /Tools/RbmToCHeader.bat
+5. continue on with the build steps above.
+

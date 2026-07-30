@@ -1,0 +1,14 @@
+[Common]
+FormatVersion=3
+OldestCompatibleFormatVersion=3
+Manufacturer=National Instruments
+Model=NI 6569 ALL IN
+Description=NI 6569 64-IN Module 
+IoModuleID=0x10937A9D
+CompatibleCLIPSockets=FlexRIOIoSocketType3_v1
+
+[FlexRIOIoSocketType3_v1]
+DefaultCLIP=NI 6569 Basic CLIP All In
+SupportedIoModRefClocks=CLK10,NONE
+DefaultIoModRefClock=CLK10
+

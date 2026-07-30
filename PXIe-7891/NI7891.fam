@@ -1,0 +1,13 @@
+[Common]
+FormatVersion=3
+OldestCompatibleFormatVersion=3
+Manufacturer=National Instruments
+Model=NI 7891
+Description=PXIe-7891 FlexRIO Multifunction I/O Module, Dual-QSFP+ High-Speed Serial with 16ch AI (2MS/s), 32ch AO (2MS/s), 32ch AO (4MS/s), and 64ch DIO
+IoModuleID=0x10937AA8
+CompatibleCLIPSockets=FlexRIOIoSocketType6_v1
+
+[FlexRIOIoSocketType6_v1]
+DefaultCLIP=NI 7891 CLIP
+SupportedIoModRefClocks=NONE
+DefaultIoModRefClock=NONE

@@ -1,0 +1,3972 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CLIPDeclaration Name="NI 1487 8 In CLIP">
+  <FormatVersion>4.3</FormatVersion>
+  <CLIPVersion>23.8.0</CLIPVersion>
+  <OldestCompatibleLVVersion>20.0</OldestCompatibleLVVersion>
+  <ImplementationList>
+    <Path Name="hdl\NI148xClipTop.vhd">
+      <TopLevel/>
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\NI148xFixedLogic.dcp">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\Mipi8RxTop.edf">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\NI148xTiming.xdc">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\PkgDphyPinMapping.vhd">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\PkgMipiTypes.vhd">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\PkgAxi4Lite.vhd">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\PkgAxi4LiteConfig.vhd">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\PkgAxiVideoStream.vhd">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\PkgDPhyIfcRegmap.vhd">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="hdl\NormalizeSerdesGpio.vhd">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+  </ImplementationList>
+
+  <TopLevelEntityAndArchitecture>
+    <SynthesisModel>
+      <Entity>NI148xClipTop</Entity>
+      <Architecture>rtl</Architecture>
+    </SynthesisModel>
+  </TopLevelEntityAndArchitecture>
+
+  <Description>
+    The NI 1487 8 In CLIP exposes serial input CSI-2 data as AXI Stream interfaces, provides read and write access to Deserializer MFPs, and provides read-only status indicators for Power Over Coax and other signals.
+  </Description>
+
+  <CompatibleIOModuleList>
+    <IOModule>IOModuleID:0x10937A85</IOModule>
+  </CompatibleIOModuleList>
+
+  <CompatibleCLIPSocketList>
+    <Socket>FlexRIOIoSocketType4_v1</Socket>
+  </CompatibleCLIPSocketList>
+
+  <NumberOfDCMsNeeded>0</NumberOfDCMsNeeded>
+  <NumberOfMMCMsNeeded>0</NumberOfMMCMsNeeded>
+  <NumberOfBufGNeeded>0</NumberOfBufGNeeded>
+
+  <InterfaceList>
+    <Interface Name="Socket">
+      <InterfaceType>Socket</InterfaceType>
+        <SignalList>
+          <!-- *********************** -->
+          <!-- FAM IO -->
+          <!-- *********************** -->
+          <!-- GPIO. Main differential data path. -->
+          <Signal name="aDiffGpio_p">
+            <HDLName>aDiffGpio_p</HDLName>
+            <HDLType>std_logic_vector(45 downto 0)</HDLType>
+            <Direction>Bidirectional</Direction>
+            <SignalType>data</SignalType>
+            <Description/>
+            <DataType>
+              <Array>
+                <Boolean/>
+                <Size>46</Size>
+              </Array>
+            </DataType>
+            <RequiredClockDomain/>
+            <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+          </Signal>
+          <Signal name="aDiffGpio_n">
+            <HDLName>aDiffGpio_n</HDLName>
+            <HDLType>std_logic_vector(45 downto 0)</HDLType>
+            <Direction>Bidirectional</Direction>
+            <SignalType>data</SignalType>
+            <Description/>
+            <DataType>
+              <Array>
+                <Boolean/>
+                <Size>46</Size>
+              </Array>
+            </DataType>
+            <RequiredClockDomain/>
+            <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+          </Signal>
+          <!-- Configuration . Single-Ended IO -->
+          <Signal name="aSeGpio">
+            <HDLName>aSeGpio</HDLName>
+            <HDLType>std_logic_vector(29 downto 0)</HDLType>
+            <Direction>Bidirectional</Direction>
+            <SignalType>data</SignalType>
+            <Description/>
+            <DataType>
+              <Array>
+                <Boolean/>
+                <Size>30</Size>
+              </Array>
+            </DataType>
+            <RequiredClockDomain/>
+            <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+          </Signal>
+
+          <!-- *********************** -->
+          <!-- Support -->
+          <!-- *********************** -->
+          <Signal name="aReservedToClip">
+            <HDLName>aReservedToClip</HDLName>
+            <DataType>
+              <Array>
+                <Boolean></Boolean>
+                <Size>16</Size>
+              </Array>
+            </DataType>
+            <Direction>ToCLIP</Direction>
+            <HDLType>std_logic_vector(15 downto 0)</HDLType>
+            <RequiredClockDomain/>
+            <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+          </Signal>
+          <Signal name="aReservedFromClip">
+            <HDLName>aReservedFromClip</HDLName>
+            <DataType>
+              <Array>
+                <Boolean></Boolean>
+                <Size>16</Size>
+              </Array>
+            </DataType>
+            <Direction>FromCLIP</Direction>
+            <HDLType>std_logic_vector(15 downto 0)</HDLType>
+            <RequiredClockDomain/>
+            <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+          </Signal>
+          <Signal name="stIoModuleSupportsFRAGLs">
+            <HDLName>stIoModuleSupportsFRAGLs</HDLName>
+            <DataType>
+              <Boolean></Boolean>
+            </DataType>
+            <Direction>FromCLIP</Direction>
+            <HDLType>std_logic</HDLType>
+            <RequiredClockDomain/>
+            <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+          </Signal>
+          <Signal name="xIoPresent">
+            <HDLName>xIoPresent</HDLName>
+            <DataType>
+              <Boolean></Boolean>
+            </DataType>
+            <Direction>ToCLIP</Direction>
+            <HDLType>std_logic</HDLType>
+            <RequiredClockDomain/>
+            <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+          </Signal>
+          <Signal name="xIoReady">
+            <HDLName>xIoReady</HDLName>
+            <DataType>
+              <Boolean></Boolean>
+            </DataType>
+            <Direction>ToCLIP</Direction>
+            <HDLType>std_logic</HDLType>
+            <RequiredClockDomain/>
+            <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+          </Signal>
+          <Signal name="xIoOutputEnable">
+            <HDLName>xIoOutputEnable</HDLName>
+            <DataType>
+              <Boolean></Boolean>
+            </DataType>
+            <Direction>ToCLIP</Direction>
+            <HDLType>std_logic</HDLType>
+            <RequiredClockDomain/>
+            <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+          </Signal>
+
+                  <!-- ******************************** -->
+        <!-- AXI Interfaces To/From CLIP      -->
+        <!-- ******************************** -->
+        <!-- Common AXI Clock -->
+        <!-- SocketClk80 -->
+        <Signal name="AxiClk">
+          <HDLName>AxiClk</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <!-- AXI4Stream from the Host -->
+        <!-- To CLIP -->
+        <Signal name="xHostAxiStreamToClipTData">
+          <HDLName>xHostAxiStreamToClipTData</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>32</Size>
+            </Array>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xHostAxiStreamToClipTLast">
+          <HDLName>xHostAxiStreamToClipTLast</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xHostAxiStreamToClipTReady">
+          <HDLName>xHostAxiStreamToClipTReady</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xHostAxiStreamToClipTValid">
+          <HDLName>xHostAxiStreamToClipTValid</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <!-- Fom CLIP -->
+        <Signal name="xHostAxiStreamFromClipTData">
+          <HDLName>xHostAxiStreamFromClipTData</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>32</Size>
+            </Array>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xHostAxiStreamFromClipTLast">
+          <HDLName>xHostAxiStreamFromClipTLast</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xHostAxiStreamFromClipTReady">
+          <HDLName>xHostAxiStreamFromClipTReady</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xHostAxiStreamFromClipTValid">
+          <HDLName>xHostAxiStreamFromClipTValid</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <!-- ************************* -->
+        <!-- FAM Synchronization Plane -->
+        <!-- ************************* -->
+        <!-- TimeBase -->
+        <Signal Name="DeviceClk">
+          <HDLName>DeviceClk</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="SampleClk">
+          <HDLName>SampleClk</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="dvTdcAssert">
+          <HDLName>dvTdcAssert</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="dtTdcAssert">
+          <HDLName>dtTdcAssert</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="dtDevClkEn">
+          <HDLName>dtDevClkEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+
+        <!-- AXI4Stream from the Diagram -->
+        <!-- To CLIP -->
+        <Signal name="xDiagramAxiStreamToClipTData">
+          <HDLName>xDiagramAxiStreamToClipTData</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>32</Size>
+            </Array>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xDiagramAxiStreamToClipTLast">
+          <HDLName>xDiagramAxiStreamToClipTLast</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xDiagramAxiStreamToClipTReady">
+          <HDLName>xDiagramAxiStreamToClipTReady</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xDiagramAxiStreamToClipTValid">
+          <HDLName>xDiagramAxiStreamToClipTValid</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <!-- From CLIP -->
+        <Signal name="xDiagramAxiStreamFromClipTData">
+          <HDLName>xDiagramAxiStreamFromClipTData</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>32</Size>
+            </Array>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xDiagramAxiStreamFromClipTLast">
+          <HDLName>xDiagramAxiStreamFromClipTLast</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xDiagramAxiStreamFromClipTReady">
+          <HDLName>xDiagramAxiStreamFromClipTReady</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xDiagramAxiStreamFromClipTValid">
+          <HDLName>xDiagramAxiStreamFromClipTValid</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <!-- Axi4Lite interface To FixedLogic -->
+        <Signal name="xClipAxi4LiteMasterARAddr">
+          <HDLName>xClipAxi4LiteMasterARAddr</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>32</Size>
+            </Array>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterARProt">
+          <HDLName>xClipAxi4LiteMasterARProt</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>3</Size>
+            </Array>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterARReady">
+          <HDLName>xClipAxi4LiteMasterARReady</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterARValid">
+          <HDLName>xClipAxi4LiteMasterARValid</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterAWAddr">
+          <HDLName>xClipAxi4LiteMasterAWAddr</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>32</Size>
+            </Array>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterAWProt">
+          <HDLName>xClipAxi4LiteMasterAWProt</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>3</Size>
+            </Array>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic_vector(2 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterAWReady">
+          <HDLName>xClipAxi4LiteMasterAWReady</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterAWValid">
+          <HDLName>xClipAxi4LiteMasterAWValid</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterBReady">
+          <HDLName>xClipAxi4LiteMasterBReady</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterBResp">
+          <HDLName>xClipAxi4LiteMasterBResp</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>2</Size>
+            </Array>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic_vector(1 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterBValid">
+          <HDLName>xClipAxi4LiteMasterBValid</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterRData">
+          <HDLName>xClipAxi4LiteMasterRData</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>32</Size>
+            </Array>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterRReady">
+          <HDLName>xClipAxi4LiteMasterRReady</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterRResp">
+          <HDLName>xClipAxi4LiteMasterRResp</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>2</Size>
+            </Array>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic_vector(1 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterRValid">
+          <HDLName>xClipAxi4LiteMasterRValid</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterWData">
+          <HDLName>xClipAxi4LiteMasterWData</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>32</Size>
+            </Array>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterWReady">
+          <HDLName>xClipAxi4LiteMasterWReady</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterWStrb">
+          <HDLName>xClipAxi4LiteMasterWStrb</HDLName>
+          <DataType>
+            <Array>
+              <Boolean></Boolean>
+              <Size>4</Size>
+            </Array>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic_vector(3 downto 0)</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteMasterWValid">
+          <HDLName>xClipAxi4LiteMasterWValid</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>FromCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal name="xClipAxi4LiteInterrupt">
+          <HDLName>xClipAxi4LiteInterrupt</HDLName>
+          <DataType>
+            <Boolean></Boolean>
+          </DataType>
+          <Direction>ToCLIP</Direction>
+          <HDLType>std_logic</HDLType>
+          <RequiredClockDomain/>
+          <UseInLabVIEWSingleCycleTimedLoop>NotAllowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+      </SignalList>
+    </Interface>
+
+    <Interface Name="Fabric">
+      <InterfaceType>Fabric</InterfaceType>
+      <SignalList>
+        <Signal Name="aReset">
+          <HDLName>aDiagramResetSL</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>reset</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+        </Signal>
+        <Signal Name="Clock Gate">
+          <HDLName>aDiagramClkEnable</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>clock gate</SignalType>
+          <DataType>
+            <Boolean/>
+          </DataType>
+        </Signal>
+      </SignalList>
+    </Interface>
+
+    <Interface Name="LabVIEW">
+      <InterfaceType>LabVIEW</InterfaceType>
+      <SignalList>
+        <Signal Name="Top Level Clock To Clip">
+          <HDLName>TopLevelClk80</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>clock</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <CyclesRequiredBeforeAsynchronousResetClears>0</CyclesRequiredBeforeAsynchronousResetClears>
+          <FreqInHertz>
+            <Max>80.0000M</Max>
+            <Min>80.0000M</Min>
+          </FreqInHertz>
+          <SpecificTargetClock>80 MHz Clock</SpecificTargetClock>
+        </Signal>
+
+        <Signal Name="PXIe_Clk100">
+          <HDLName>PxieClk100</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>clock</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <CyclesRequiredBeforeAsynchronousResetClears>0</CyclesRequiredBeforeAsynchronousResetClears>
+          <FreqInHertz>
+            <Max>100.0000M</Max>
+            <Min>100.0000M</Min>
+          </FreqInHertz>
+          <SpecificTargetClock>PXIe_Clk100</SpecificTargetClock>
+        </Signal>
+
+        <Signal Name="CSI-2 AXI Stream Clock">
+          <HDLName>VideoClk</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>clock</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <DutyCycleRange>
+            <PercentInHighMax>55.000000</PercentInHighMax>
+            <PercentInHighMin>45.000000</PercentInHighMin>
+          </DutyCycleRange>
+          <AccuracyInPPM>100.000000</AccuracyInPPM>
+          <JitterInPicoSeconds>250.000000</JitterInPicoSeconds>
+          <FreqInHertz>
+            <Max>200.000M</Max>
+            <Min>200.000M</Min>
+          </FreqInHertz>
+          <SupportsGating/>
+        </Signal>
+
+        <Signal name="IO Ready">
+          <HDLName>xIoModuleReady</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>Top Level Clock To Clip</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="IO Error">
+          <HDLName>xIoModuleErrorCode</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <I32/>
+          </DataType>
+          <RequiredClockDomain>Top Level Clock To Clip</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="GPIO Clock">
+          <HDLName>IoClock</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>clock</SignalType>
+          <Description/>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <DutyCycleRange>
+            <PercentInHighMax>55.000000</PercentInHighMax>
+            <PercentInHighMin>45.000000</PercentInHighMin>
+          </DutyCycleRange>
+          <AccuracyInPPM>100.000000</AccuracyInPPM>
+          <JitterInPicoSeconds>250.000000</JitterInPicoSeconds>
+          <FreqInHertz>
+            <Max>4.000M</Max>
+            <Min>4.000M</Min>
+          </FreqInHertz>
+          <SupportsGating/>
+        </Signal>
+
+        <Signal Name="SI 4 CSI-2 AXI Stream TData">
+          <HDLName>vSI4VideoAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 CSI-2 AXI Stream Raw TData">
+          <HDLName>vSI4VideoRawAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 CSI-2 AXI Stream TLast">
+          <HDLName>vSI4VideoAxiStreamTLast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 CSI-2 AXI Stream TValid">
+          <HDLName>vSI4VideoAxiStreamTValid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 CSI-2 AXI Stream TUser">
+          <HDLName>vSI4VideoAxiStreamTUser</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 CSI-2 AXI Stream TData">
+          <HDLName>vSI0VideoAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 CSI-2 AXI Stream Raw TData">
+          <HDLName>vSI0VideoRawAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 CSI-2 AXI Stream TLast">
+          <HDLName>vSI0VideoAxiStreamTLast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 CSI-2 AXI Stream TValid">
+          <HDLName>vSI0VideoAxiStreamTValid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 CSI-2 AXI Stream TUser">
+          <HDLName>vSI0VideoAxiStreamTUser</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 CSI-2 AXI Stream TData">
+          <HDLName>vSI5VideoAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 CSI-2 AXI Stream Raw TData">
+          <HDLName>vSI5VideoRawAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 CSI-2 AXI Stream TLast">
+          <HDLName>vSI5VideoAxiStreamTLast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 CSI-2 AXI Stream TValid">
+          <HDLName>vSI5VideoAxiStreamTValid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 CSI-2 AXI Stream TUser">
+          <HDLName>vSI5VideoAxiStreamTUser</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 CSI-2 AXI Stream TData">
+          <HDLName>vSI1VideoAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 CSI-2 AXI Stream Raw TData">
+          <HDLName>vSI1VideoRawAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 CSI-2 AXI Stream TLast">
+          <HDLName>vSI1VideoAxiStreamTLast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 CSI-2 AXI Stream TValid">
+          <HDLName>vSI1VideoAxiStreamTValid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 CSI-2 AXI Stream TUser">
+          <HDLName>vSI1VideoAxiStreamTUser</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 CSI-2 AXI Stream TData">
+          <HDLName>vSI6VideoAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 CSI-2 AXI Stream Raw TData">
+          <HDLName>vSI6VideoRawAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 CSI-2 AXI Stream TLast">
+          <HDLName>vSI6VideoAxiStreamTLast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 CSI-2 AXI Stream TValid">
+          <HDLName>vSI6VideoAxiStreamTValid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 CSI-2 AXI Stream TUser">
+          <HDLName>vSI6VideoAxiStreamTUser</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 CSI-2 AXI Stream TData">
+          <HDLName>vSI2VideoAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 CSI-2 AXI Stream Raw TData">
+          <HDLName>vSI2VideoRawAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 CSI-2 AXI Stream TLast">
+          <HDLName>vSI2VideoAxiStreamTLast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 CSI-2 AXI Stream TValid">
+          <HDLName>vSI2VideoAxiStreamTValid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 CSI-2 AXI Stream TUser">
+          <HDLName>vSI2VideoAxiStreamTUser</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 CSI-2 AXI Stream TData">
+          <HDLName>vSI7VideoAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 CSI-2 AXI Stream Raw TData">
+          <HDLName>vSI7VideoRawAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 CSI-2 AXI Stream TLast">
+          <HDLName>vSI7VideoAxiStreamTLast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 CSI-2 AXI Stream TValid">
+          <HDLName>vSI7VideoAxiStreamTValid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 CSI-2 AXI Stream TUser">
+          <HDLName>vSI7VideoAxiStreamTUser</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 CSI-2 AXI Stream TData">
+          <HDLName>vSI3VideoAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 CSI-2 AXI Stream Raw TData">
+          <HDLName>vSI3VideoRawAxiStreamTData</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 CSI-2 AXI Stream TLast">
+          <HDLName>vSI3VideoAxiStreamTLast</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 CSI-2 AXI Stream TValid">
+          <HDLName>vSI3VideoAxiStreamTValid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 CSI-2 AXI Stream TUser">
+          <HDLName>vSI3VideoAxiStreamTUser</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>32</WordLength>
+              <IntegerWordLength>32</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <RequiredClockDomain>CSI-2 AXI Stream Clock</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <!-- ************************************************************ -->
+        <!-- Start Serdes GPIO -->
+        <Signal Name="SI 0 SI 1 Deserializer MFP 0 Input">
+          <HDLName>sDiagramDes0Mfp0In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 0 Output">
+          <HDLName>sDiagramDes0Mfp0Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 0 Output Enable">
+          <HDLName>sDiagramDes0Mfp0Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 1 Input">
+          <HDLName>sDiagramDes0Mfp1In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 1 Output">
+          <HDLName>sDiagramDes0Mfp1Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 1 Output Enable">
+          <HDLName>sDiagramDes0Mfp1Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 2 Input">
+          <HDLName>sDiagramDes0Mfp2In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 3 Input">
+          <HDLName>sDiagramDes0Mfp3In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 4 Input">
+          <HDLName>sDiagramDes0Mfp4In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 4 Output">
+          <HDLName>sDiagramDes0Mfp4Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 4 Output Enable">
+          <HDLName>sDiagramDes0Mfp4Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 5 Input">
+          <HDLName>sDiagramDes0Mfp5In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 5 Output">
+          <HDLName>sDiagramDes0Mfp5Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 5 Output Enable">
+          <HDLName>sDiagramDes0Mfp5Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 6 Input">
+          <HDLName>sDiagramDes0Mfp6In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 6 Output">
+          <HDLName>sDiagramDes0Mfp6Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 6 Output Enable">
+          <HDLName>sDiagramDes0Mfp6Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 7 Input">
+          <HDLName>sDiagramDes0Mfp7In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 7 Output">
+          <HDLName>sDiagramDes0Mfp7Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 7 Output Enable">
+          <HDLName>sDiagramDes0Mfp7Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 0 Input">
+          <HDLName>sDiagramDes1Mfp0In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 0 Output">
+          <HDLName>sDiagramDes1Mfp0Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 0 Output Enable">
+          <HDLName>sDiagramDes1Mfp0Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 1 Input">
+          <HDLName>sDiagramDes1Mfp1In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 1 Output">
+          <HDLName>sDiagramDes1Mfp1Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 1 Output Enable">
+          <HDLName>sDiagramDes1Mfp1Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 2 Input">
+          <HDLName>sDiagramDes1Mfp2In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 3 Input">
+          <HDLName>sDiagramDes1Mfp3In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 4 Input">
+          <HDLName>sDiagramDes1Mfp4In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 4 Output">
+          <HDLName>sDiagramDes1Mfp4Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 4 Output Enable">
+          <HDLName>sDiagramDes1Mfp4Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 5 Input">
+          <HDLName>sDiagramDes1Mfp5In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 5 Output">
+          <HDLName>sDiagramDes1Mfp5Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 5 Output Enable">
+          <HDLName>sDiagramDes1Mfp5Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 6 Input">
+          <HDLName>sDiagramDes1Mfp6In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 6 Output">
+          <HDLName>sDiagramDes1Mfp6Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 6 Output Enable">
+          <HDLName>sDiagramDes1Mfp6Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 7 Input">
+          <HDLName>sDiagramDes1Mfp7In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 7 Output">
+          <HDLName>sDiagramDes1Mfp7Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 7 Output Enable">
+          <HDLName>sDiagramDes1Mfp7Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 0 Input">
+          <HDLName>sDiagramDes2Mfp0In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 0 Output">
+          <HDLName>sDiagramDes2Mfp0Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 0 Output Enable">
+          <HDLName>sDiagramDes2Mfp0Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 1 Input">
+          <HDLName>sDiagramDes2Mfp1In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 1 Output">
+          <HDLName>sDiagramDes2Mfp1Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 1 Output Enable">
+          <HDLName>sDiagramDes2Mfp1Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 2 Input">
+          <HDLName>sDiagramDes2Mfp2In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 3 Input">
+          <HDLName>sDiagramDes2Mfp3In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 4 Input">
+          <HDLName>sDiagramDes2Mfp4In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 4 Output">
+          <HDLName>sDiagramDes2Mfp4Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 4 Output Enable">
+          <HDLName>sDiagramDes2Mfp4Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 5 Input">
+          <HDLName>sDiagramDes2Mfp5In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 5 Output">
+          <HDLName>sDiagramDes2Mfp5Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 5 Output Enable">
+          <HDLName>sDiagramDes2Mfp5Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 6 Input">
+          <HDLName>sDiagramDes2Mfp6In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 6 Output">
+          <HDLName>sDiagramDes2Mfp6Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 6 Output Enable">
+          <HDLName>sDiagramDes2Mfp6Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 7 Input">
+          <HDLName>sDiagramDes2Mfp7In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 7 Output">
+          <HDLName>sDiagramDes2Mfp7Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 7 Output Enable">
+          <HDLName>sDiagramDes2Mfp7Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 0 Input">
+          <HDLName>sDiagramDes3Mfp0In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 0 Output">
+          <HDLName>sDiagramDes3Mfp0Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 0 Output Enable">
+          <HDLName>sDiagramDes3Mfp0Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 1 Input">
+          <HDLName>sDiagramDes3Mfp1In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 1 Output">
+          <HDLName>sDiagramDes3Mfp1Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 1 Output Enable">
+          <HDLName>sDiagramDes3Mfp1Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 2 Input">
+          <HDLName>sDiagramDes3Mfp2In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 3 Input">
+          <HDLName>sDiagramDes3Mfp3In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 4 Input">
+          <HDLName>sDiagramDes3Mfp4In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 4 Output">
+          <HDLName>sDiagramDes3Mfp4Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 4 Output Enable">
+          <HDLName>sDiagramDes3Mfp4Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 5 Input">
+          <HDLName>sDiagramDes3Mfp5In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 5 Output">
+          <HDLName>sDiagramDes3Mfp5Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 5 Output Enable">
+          <HDLName>sDiagramDes3Mfp5Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 6 Input">
+          <HDLName>sDiagramDes3Mfp6In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 6 Output">
+          <HDLName>sDiagramDes3Mfp6Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 6 Output Enable">
+          <HDLName>sDiagramDes3Mfp6Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 7 Input">
+          <HDLName>sDiagramDes3Mfp7In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 7 Output">
+          <HDLName>sDiagramDes3Mfp7Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 7 Output Enable">
+          <HDLName>sDiagramDes3Mfp7Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 8 Input">
+          <HDLName>sDiagramDes0Mfp8In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 8 Output">
+          <HDLName>sDiagramDes0Mfp8Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 8 Output Enable">
+          <HDLName>sDiagramDes0Mfp8Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 9 Input">
+          <HDLName>sDiagramDes0Mfp9In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 9 Output">
+          <HDLName>sDiagramDes0Mfp9Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 9 Output Enable">
+          <HDLName>sDiagramDes0Mfp9Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 10 Input">
+          <HDLName>sDiagramDes0Mfp10In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 10 Output">
+          <HDLName>sDiagramDes0Mfp10Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer MFP 10 Output Enable">
+          <HDLName>sDiagramDes0Mfp10Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 8 Input">
+          <HDLName>sDiagramDes1Mfp8In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 8 Output">
+          <HDLName>sDiagramDes1Mfp8Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 8 Output Enable">
+          <HDLName>sDiagramDes1Mfp8Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 9 Input">
+          <HDLName>sDiagramDes1Mfp9In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 9 Output">
+          <HDLName>sDiagramDes1Mfp9Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 9 Output Enable">
+          <HDLName>sDiagramDes1Mfp9Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 10 Input">
+          <HDLName>sDiagramDes1Mfp10In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 10 Output">
+          <HDLName>sDiagramDes1Mfp10Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer MFP 10 Output Enable">
+          <HDLName>sDiagramDes1Mfp10Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 8 Input">
+          <HDLName>sDiagramDes2Mfp8In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 8 Output">
+          <HDLName>sDiagramDes2Mfp8Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 8 Output Enable">
+          <HDLName>sDiagramDes2Mfp8Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 9 Input">
+          <HDLName>sDiagramDes2Mfp9In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 9 Output">
+          <HDLName>sDiagramDes2Mfp9Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 9 Output Enable">
+          <HDLName>sDiagramDes2Mfp9Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 10 Input">
+          <HDLName>sDiagramDes2Mfp10In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 10 Output">
+          <HDLName>sDiagramDes2Mfp10Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer MFP 10 Output Enable">
+          <HDLName>sDiagramDes2Mfp10Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 8 Input">
+          <HDLName>sDiagramDes3Mfp8In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 8 Output">
+          <HDLName>sDiagramDes3Mfp8Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 8 Output Enable">
+          <HDLName>sDiagramDes3Mfp8Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 9 Input">
+          <HDLName>sDiagramDes3Mfp9In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 9 Output">
+          <HDLName>sDiagramDes3Mfp9Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 9 Output Enable">
+          <HDLName>sDiagramDes3Mfp9Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 10 Input">
+          <HDLName>sDiagramDes3Mfp10In</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 10 Output">
+          <HDLName>sDiagramDes3Mfp10Out</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer MFP 10 Output Enable">
+          <HDLName>sDiagramDes3Mfp10Oe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <!-- End Serdes GPIO -->
+        <!-- ************************************************************ -->
+
+        <!-- ************************************************************ -->
+        <!-- Start Power Over Coax IO -->
+
+        <Signal Name="SI 0 PoC Raw Current">
+          <HDLName>sDiagramCh0PocCurrent</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 PoC Raw Voltage">
+          <HDLName>sDiagramCh0PocVoltage</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 PoC External Power Enabled">
+          <HDLName>sDiagramCh0PocExtEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 PoC External Power Good">
+          <HDLName>sDiagramCh0ExtPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 PoC Internal Power Enabled">
+          <HDLName>sDiagramCh0PocIntEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 PoC Internal Power Good">
+          <HDLName>sDiagramCh0IntPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 PoC Raw Current">
+          <HDLName>sDiagramCh1PocCurrent</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 PoC Raw Voltage">
+          <HDLName>sDiagramCh1PocVoltage</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 PoC External Power Enabled">
+          <HDLName>sDiagramCh1PocExtEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 PoC External Power Good">
+          <HDLName>sDiagramCh1ExtPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 PoC Internal Power Enabled">
+          <HDLName>sDiagramCh1PocIntEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 1 PoC Internal Power Good">
+          <HDLName>sDiagramCh1IntPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 PoC Raw Current">
+          <HDLName>sDiagramCh2PocCurrent</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 PoC Raw Voltage">
+          <HDLName>sDiagramCh2PocVoltage</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 PoC External Power Enabled">
+          <HDLName>sDiagramCh2PocExtEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 PoC External Power Good">
+          <HDLName>sDiagramCh2ExtPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 PoC Internal Power Enabled">
+          <HDLName>sDiagramCh2PocIntEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 PoC Internal Power Good">
+          <HDLName>sDiagramCh2IntPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 PoC Raw Current">
+          <HDLName>sDiagramCh3PocCurrent</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 PoC Raw Voltage">
+          <HDLName>sDiagramCh3PocVoltage</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 PoC External Power Enabled">
+          <HDLName>sDiagramCh3PocExtEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 PoC External Power Good">
+          <HDLName>sDiagramCh3ExtPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 PoC Internal Power Enabled">
+          <HDLName>sDiagramCh3PocIntEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 3 PoC Internal Power Good">
+          <HDLName>sDiagramCh3IntPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 PoC Raw Current">
+          <HDLName>sDiagramCh4PocCurrent</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 PoC Raw Voltage">
+          <HDLName>sDiagramCh4PocVoltage</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 PoC External Power Enabled">
+          <HDLName>sDiagramCh4PocExtEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 PoC External Power Good">
+          <HDLName>sDiagramCh4ExtPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 PoC Internal Power Enabled">
+          <HDLName>sDiagramCh4PocIntEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 PoC Internal Power Good">
+          <HDLName>sDiagramCh4IntPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 PoC Raw Current">
+          <HDLName>sDiagramCh5PocCurrent</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 PoC Raw Voltage">
+          <HDLName>sDiagramCh5PocVoltage</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 PoC External Power Enabled">
+          <HDLName>sDiagramCh5PocExtEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 PoC External Power Good">
+          <HDLName>sDiagramCh5ExtPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 PoC Internal Power Enabled">
+          <HDLName>sDiagramCh5PocIntEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 5 PoC Internal Power Good">
+          <HDLName>sDiagramCh5IntPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 PoC Raw Current">
+          <HDLName>sDiagramCh6PocCurrent</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 PoC Raw Voltage">
+          <HDLName>sDiagramCh6PocVoltage</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 PoC External Power Enabled">
+          <HDLName>sDiagramCh6PocExtEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 PoC External Power Good">
+          <HDLName>sDiagramCh6ExtPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 PoC Internal Power Enabled">
+          <HDLName>sDiagramCh6PocIntEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 PoC Internal Power Good">
+          <HDLName>sDiagramCh6IntPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 PoC Raw Current">
+          <HDLName>sDiagramCh7PocCurrent</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 PoC Raw Voltage">
+          <HDLName>sDiagramCh7PocVoltage</HDLName>
+          <HDLType>std_logic_vector(11 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <FXP>
+              <WordLength>12</WordLength>
+              <IntegerWordLength>12</IntegerWordLength>
+              <Unsigned/>
+            </FXP>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 PoC External Power Enabled">
+          <HDLName>sDiagramCh7PocExtEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 PoC External Power Good">
+          <HDLName>sDiagramCh7ExtPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 PoC Internal Power Enabled">
+          <HDLName>sDiagramCh7PocIntEn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 7 PoC Internal Power Good">
+          <HDLName>sDiagramCh7IntPgood</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <!-- End Serdes Power Over Coax IO -->
+        <!-- ************************************************************ -->
+
+        <!-- ************************************************************ -->
+        <!-- Start Serdes I2C and Pwrdn IO -->
+
+        <Signal Name="SI 0 SI 1 Deserializer Power Status">
+          <HDLName>sDiagramCh1Pwrdn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer I2C SDA Input">
+          <HDLName>sDiagramCh1I2cSdaIn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer I2C SDA Output Enable">
+          <HDLName>sDiagramCh1I2cSdaOe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer I2C SCL Input">
+          <HDLName>sDiagramCh1I2cSclIn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 0 SI 1 Deserializer I2C SCL Output Enable">
+          <HDLName>sDiagramCh1I2cSclOe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer Power Status">
+          <HDLName>sDiagramCh3Pwrdn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer I2C SDA Input">
+          <HDLName>sDiagramCh3I2cSdaIn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer I2C SDA Output Enable">
+          <HDLName>sDiagramCh3I2cSdaOe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer I2C SCL Input">
+          <HDLName>sDiagramCh3I2cSclIn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 2 SI 3 Deserializer I2C SCL Output Enable">
+          <HDLName>sDiagramCh3I2cSclOe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer Power Status">
+          <HDLName>sDiagramCh5Pwrdn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer I2C SDA Input">
+          <HDLName>sDiagramCh5I2cSdaIn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer I2C SDA Output Enable">
+          <HDLName>sDiagramCh5I2cSdaOe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer I2C SCL Input">
+          <HDLName>sDiagramCh5I2cSclIn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 4 SI 5 Deserializer I2C SCL Output Enable">
+          <HDLName>sDiagramCh5I2cSclOe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer Power Status">
+          <HDLName>sDiagramCh7Pwrdn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer I2C SDA Input">
+          <HDLName>sDiagramCh7I2cSdaIn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer I2C SDA Output Enable">
+          <HDLName>sDiagramCh7I2cSdaOe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer I2C SCL Input">
+          <HDLName>sDiagramCh7I2cSclIn</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <Signal Name="SI 6 SI 7 Deserializer I2C SCL Output Enable">
+          <HDLName>sDiagramCh7I2cSclOe</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <SignalType>data</SignalType>
+          <Description>
+          </Description>
+          <DataType>
+            <Boolean/>
+          </DataType>
+          <UseInLabVIEWSingleCycleTimedLoop>Allowed</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+
+        <!-- End Serdes I2C and Pwrdn IO -->
+        <!-- ************************************************************ -->
+
+      </SignalList>
+    </Interface>
+  </InterfaceList>
+</CLIPDeclaration>

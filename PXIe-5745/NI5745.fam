@@ -1,0 +1,13 @@
+[Common]
+FormatVersion=3
+OldestCompatibleFormatVersion=3
+Manufacturer=National Instruments
+Model=NI 5745
+Description=12-Bit, 6.4 GS/s, 2-Channel PXI FlexRIO IF Transmitter
+IoModuleID=0x109379A6
+CompatibleCLIPSockets=FlexRIOIoSocketType1_v1
+
+[FlexRIOIoSocketType1_v1]
+DefaultCLIP=NI 5745 CLIP
+SupportedIoModRefClocks=CLK10, NONE
+DefaultIoModRefClock=CLK10

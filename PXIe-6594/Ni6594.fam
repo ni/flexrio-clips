@@ -1,0 +1,13 @@
+[Common]
+FormatVersion=3
+OldestCompatibleFormatVersion=3
+Manufacturer=National Instruments
+Model=NI 6594
+Description=Dual-QSFP+ High-Speed Serial with external reference clock and external output clock
+IoModuleID=0x109379FC
+CompatibleCLIPSockets=FlexRIOIoSocketType2_v1
+
+[FlexRIOIoSocketType2_v1]
+DefaultCLIP=
+SupportedIoModRefClocks=CLK10,CLK100,NONE
+DefaultIoModRefClock=CLK100

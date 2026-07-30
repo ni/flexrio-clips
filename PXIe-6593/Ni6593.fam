@@ -1,0 +1,13 @@
+[Common]
+FormatVersion=3
+OldestCompatibleFormatVersion=3
+Manufacturer=National Instruments
+Model=NI 6593
+Description=Dual-QSFP+ High-Speed Serial with external reference clock and external output clock
+IoModuleID=0x109379F9
+CompatibleCLIPSockets=FlexRIOIoSocketType1_v1
+
+[FlexRIOIoSocketType1_v1]
+DefaultCLIP=
+SupportedIoModRefClocks=CLK10,CLK100,NONE
+DefaultIoModRefClock=CLK100

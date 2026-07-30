@@ -1,0 +1,21 @@
+[Common]
+FormatVersion=3
+OldestCompatibleFormatVersion=3
+Manufacturer=National Instruments
+Model=NI 1488-01
+ModelPrettyName=NI 1488 8 In
+Description=8 Input FPD-Link IV Module
+IoModuleID=0x10937AE4
+CompatibleCLIPSockets=FlexRIOIoSocketType4_v1
+ConditionalDisableSymbols=MODEL_ALIAS,1488_8I;NUM_SI_CHANS,8;NUM_SO_CHANS,0;DATAPATH_SIZE,32;
+
+[FlexRIOIoSocketType4_v1]
+DefaultCLIP=NI 1488 8 In CLIP
+SupportedIoModRefClocks=CLK100
+DefaultIoModRefClock=CLK100
+
+[FlexRIOIoSocketType4_v1 Vivado Constraints]
+File=NI1488_01.xdc
+
+[PortDirectionMapping]
+GPIO{0..45}=in

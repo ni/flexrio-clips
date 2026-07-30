@@ -1,0 +1,2840 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <style type="text/css">
+
+      body {
+        margin: 5px;
+        font-family: verdana, "Trebuchet MS", arial, helvetica, sans-serif;
+        font-size: 80%;
+        line-height: 1.3;
+      }
+
+      @media print {
+        body {
+          margin: 0px;
+          font-family: arial, helvetica, sans-serif;
+          font-size: 80%;
+          line-height: 1;
+        }
+      }        a, a:link, a:visited, a:hover, a:active {
+          text-decoration: none;
+          color: #0000E0;
+        }
+        
+        @media print {
+          a, a:link, a:visited, a:hover, a:active {
+            color: #000000;
+          }
+        }
+        
+        div.regmap {
+          margin: 0px;
+          padding: 0px 0px 0px 10px;
+          border-top: 5px solid #A0A0C0;
+        }
+        
+        @media print {
+          div.regmap {
+            border-top: 3px solid #A4A4A4;
+          }
+        }
+        
+        h1.regmap {
+          font-size: 160%;
+          text-align: left;
+          font-weight: bold;
+          margin: 0px;
+          padding: 10px 0px;
+          color: #404080;
+        }
+        
+        @media print {
+          h1.regmap {
+            font-size: 140%;
+            color: black;
+          }
+        }
+        
+        p.rbmfooter {
+          font-weight: bold;
+          font-size: 120%;
+          color: #A04080;
+          padding: 0px 0px 15px 10px;
+          margin: 0px;
+        }
+        
+        @media print {
+          p.rbmfooter {
+            font-size: 100%;
+            color: black;
+            padding: 0px 0px 0px 10px;
+          }
+        }
+        
+        div.group {
+          border-top: 3px solid #A0C0A0;
+          margin: 10px 0px 0px 0px;
+          padding: 0px 0px 0px 10px;
+        }
+        
+        @media print {
+          div.group {
+            border-top: 2px solid #A4A4A4;
+          }
+        }
+        
+        h2.group {
+          font-size: 140%;
+          text-align: left;
+          font-weight: bold;
+          margin: 0px;
+          padding: 10px 0px 5px 0px;
+          color: #407040;
+        }
+        
+        p.groupsource {
+          font-size: 100%;
+          text-align: left;
+          font-weight: bold;
+          margin: 0px;
+          padding: 5px 0px 0px 10px;
+          color: #407040;
+        }
+        
+        @media print {
+          h2.group {
+            font-size: 120%;
+            color: black;
+          }
+        }
+        
+        div.info {
+          margin: 5px 0px;
+        }
+        
+        div.info p {
+          margin: 5px 0px;
+          padding: 0px;
+        }
+        
+        div.info h3 {
+          font-size: 120%;
+          text-align: left;
+          font-weight: bold;
+          margin: 0px;
+          padding: 10px 0px;
+          color: #804080;
+        }
+        
+        @media print {
+          div.info h3 {
+            font-size: 95%;
+            color: black;
+          }
+        }
+        
+        div.info h4 {
+          font-size: 110%;
+          text-align: left;
+          font-weight: bold;
+          margin: 0px;
+          padding: 10px 0px;
+          color: #A04040;
+        }
+        
+        @media print {
+          div.info h4 {
+            font-size: 90%;
+            font-weight: bold
+          }
+        }
+        
+        h5 {
+          font-size: 100%;
+          text-align: left;
+          font-weight: bold;
+          margin: 0px;
+          padding: 10px 0px;
+          color: #A04040;
+        }
+        
+        
+        @media print {
+          h5 {
+            font-size: 80%;
+            font-weight: bol
+          }
+        }
+        
+        div.register, div.enum {
+          /* border-top: 2px solid #C0C0C0; */
+          margin: 10px;
+        }
+        
+        div.register h3 {
+          font-size: 120%;
+          text-align: left;
+          font-weight: bold;
+          margin: 0px;
+          padding: 10px 0px 5px 0px;
+          color: #004040;
+        }
+        
+        @media print {
+          div.register h3 {
+            font-size: 100%;
+            color: black;
+            padding: 5px 0px 5px 0px;
+          }
+        }
+        
+        div.register h3 .addrlsb {
+          font-size: 70%;
+          font-weight: lighter;
+          color: LightGray;
+        }
+        
+        a.sh_addrs {
+          font-weight: normal;
+          font-size: 70%;
+          padding-left: 5px;
+        }
+        
+        @media print {
+          a.sh_addrs {
+            display: none;
+          }
+        }
+        
+        div.register div.sh_addrs {
+          color: #000080;
+          margin: 0px;
+          padding: 0px 0px 0px 10px;
+          display: none;
+        }
+        
+        div.register div.sh_addrs table {
+          padding: 0px;
+          margin: 0px 0px 5px 10px;
+        }
+        
+        div.register div.sh_addrs table td {
+          /* top right bottom left */
+          padding: 3px 5px 0px 0px;
+        }
+        
+        div.register div.sh_addrs table td.l {
+          padding-left: 5px;
+          font-weight: bold;
+        }
+        
+        div.enum h3 {
+          font-size: 120%;
+          text-align: left;
+          font-weight: bold;
+          margin: 0px;
+          padding: 10px 0px 5px 0px;
+          color: #800000;
+        }
+        
+        @media print {
+          div.enum h3 {
+            font-size: 100%;
+            color: black;
+            padding: 5px 0px 5px 0px;
+          }
+        }
+        
+        a.sh_enum {
+          font-size: 85%;
+        }
+        
+        @media print {
+          a.sh_enum {
+            display: none;
+          }
+        }
+        
+        div.sh_enum {
+          display: none;
+        }
+        
+        table {
+          font-size: 100%;
+        }
+        
+        @media print {
+          table {
+            font-size: 75%;
+          }
+        
+          table table {
+            font-size: 100%;
+          }
+        }
+        
+        table.bitfields, table.enum {
+          border: 1px solid #C0C0C0;
+          margin-left: 20px;
+        }
+        
+        table.enum {
+          margin-top: 5px;
+        }
+        
+        table.bitfields td, table.enum td {
+          padding: 3px 8px;
+        }
+        
+        table.enum td {
+          border-top: 1px solid #D8D8D8;
+        }
+        
+        table.bitfields tr.byte td {
+          border-top: 1px solid #D8D8D8;
+        }
+        
+        table.bitfields tr.header td, table.enum tr.header td,
+        table.enum tr.header2 td {
+          font-weight: bold;
+          color: #004080;
+          background-color: #F0F0F0;
+          padding-top: 1px;
+          padding-bottom: 1px;
+        }
+        
+        @media print {
+          table.bitfields tr.header td, table.enum tr.header td,
+          table.enum tr.header2 td {
+            color: black;
+          }
+        }
+        
+        table.bitfields tr.header td {
+          text-align: left;
+          border-bottom: 1px solid #C0C0C0;
+        }
+        
+        table.bitfields tr.header td.bits {
+          text-align: center;
+        }
+        
+        table.enum tr.header td {
+          text-align: center;
+          border-top: none;
+          border-bottom: none;
+        }
+        
+        table.enum tr.header2 td {
+          text-align: center;
+        }
+        
+        table.bitfields td.bits, table.enum td.value, table.enum td.value2 {
+          font-weight: bold;
+          text-align: center;
+        }
+        
+        table.enum td.value2 {
+          border-left: 1px solid #C0C0C0;
+        }
+        
+        table.enum td.l {
+          text-align: center;
+          border-left: 1px solid #E0E0E0;
+        }
+        
+        table.bitfields td p, table.enum td p {
+          margin: 0px;
+          padding: 3px 0px 0px 0px;
+        }
+        
+        table.bitfields td p.name, table.bitfields td p span.name, table.enum td p.name {
+          font-weight: bold;
+          padding-top: 0px;
+        }
+        
+        table.bitfields td p span.attr {
+          color: #606060;
+          padding-top: 0px;
+        }
+        
+        table.extended_info {
+          border: 1px solid #D8D8D8;
+          border-collapse: collapse;
+          padding: 0px;
+        }
+        
+        table.extended_info td.outercell {
+          border: 1px solid #D8D8D8;
+          padding: 0px;
+        }
+        
+        
+        p.reg_info, p.enum_info {
+          color: #606060;
+          margin: 0px;
+          padding: 5px 0px 0px 20px;
+        }
+        
+        p.offset_info, td.offset_info {
+          text-align: left;
+          font-weight: bold;
+          margin: 0px;
+          /* top right bottom left*/
+          padding: 0px 0px 5px 0px;
+          color: #006060;
+        }
+        
+        @media print {
+          p.reg_info, p.enum_info {
+            font-size: 70%;
+            color: black;
+            padding: 5px 0px 0px 15px;
+          }
+        }      
+      </style>
+      <script type="text/javascript">
+      
+        function toggleText( id, sign ) {
+          if (sign == "nochange") return;
+          if ( document.getElementById )
+            elem = document.getElementById( id );
+          else if ( document.all )
+            elem = eval( "document.all." + id );
+          if (elem) {
+            elemStyle = elem.style;
+            if (sign=="+") {
+              elemStyle.display = "block"
+            } else {
+              elemStyle.display = "none"
+            }
+            /*if ( elemStyle.display == "block" ) {
+              elemStyle.display = "none"
+            } else {
+              elemStyle.display = "block"
+            }*/
+          }
+        }        
+        function changeSh( id ) {
+          if ( document.getElementById )
+            elem = document.getElementById( id );
+          else if ( document.all )
+            elem = eval( "document.all." + id );
+          else
+            return "nochange";
+          val = "-";
+          if (elem.innerHTML == "show here") {
+            val = "+";
+            elem.innerHTML = "hide";
+          } else {
+            elem.innerHTML = "show here";
+          }
+          return val;
+        }
+        
+        function sb( id ) {
+          var sign = changeSh("show_" + id);
+          toggleText("div_" + id, sign);
+        }
+        
+        function changeSh2( id ) {
+          if ( document.getElementById )
+            elem = document.getElementById( id );
+          else if ( document.all )
+            elem = eval( "document.all." + id );
+          else
+            return "nochange";
+          val = "-";
+          if (elem.innerHTML == "show") {
+            val = "+";
+            elem.innerHTML = "hide";
+          } else {
+            elem.innerHTML = "show";
+          }
+          return val;
+        }
+        
+        function sa( id ) {
+          var sign = changeSh2("show_" + id);
+          toggleText("div_" + id, sign);
+        }  
+    </script>
+  </head>
+  <body>    
+    <div class="regmap">
+      <a name="nessieandjessieclip"></a>
+      <h1 class="regmap">nessieandjessieclip</h1>    
+    <p>The top is defined in HDL source file CommonFixedLogic.vhd.</p>      
+      <div class="group"><a name="P1 Content"></a><h2 class="group">P1 Content</h2>        <div class="register"><h3 class="register">Register map for 'nessieandjessieclip' core team members</h3>
+                    <i>This content is intended solely for use by core team members of the 'nessieandjessieclip' project.
+                           Do not distribute or otherwise forward this content.  If you believe you have acquired
+                           access to this content in error, delete it immediately and notify the sender that you
+                           are not intended to have access to this content.<BR/><BR/>"All content provided is NI Confidential and Copyright 2018 National Instruments Corporation.
+        For information on NI trademark guidelines, please see <a href="http://www.ni.com/legal/trademarks/">http://www.ni.com/legal/trademarks/</a>. For the NI Patent Notice, please see <a href="http://www.ni.com/legal/patents/">http://www.ni.com/legal/patents/</a>."
+                    </i></div><BR/>      
+      </div>    
+    </div>    
+    <div class="regmap">
+      <a name="CfgGpio"></a>
+      <h1 class="regmap">CfgGpio</h1>    <p>This regmap has readablestrobes="true", so all strobe bits are readable by
+    default. This attribute should only be used for older regmaps to maintain
+    compatibility with previous versions of XmlParse. New regmaps should either
+    use the 'clearable' attribute or should explicitly define readable bits
+    in the same bit position as the strobe bits.</p>      
+      <div class="group"><a name="CfgGpio|Config GPIO"></a><h2 class="group">Config GPIO</h2>        
+        <div class="register">
+          <a name="CfgGpio|ResetCtrl"></a>          
+          <h3 class="register">Offset 0x0000: ResetCtrl Register (W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('CfgGpio|ResetCtrl_in')">(<span id="show_CfgGpio|ResetCtrl_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_CfgGpio|ResetCtrl_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">ResetCtrl</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0000</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file ConfigGpio.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..2</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1w</td>
+              <td>
+                <p><span class="name"><a name="CfgGpio|ResetCtrl|ClearReset"></a>ClearReset</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Removes the reset from Microcontroller on the FAM.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0w</td>
+              <td>
+                <p><span class="name"><a name="CfgGpio|ResetCtrl|SetReset"></a>SetReset</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Puts the Microcontroller on the FAM in reset.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="CfgGpio|InterruptStatus"></a>          
+          <h3 class="register">Offset 0x0004: InterruptStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('CfgGpio|InterruptStatus_in')">(<span id="show_CfgGpio|InterruptStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_CfgGpio|InterruptStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">InterruptStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0004</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file ConfigGpio.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..1</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="CfgGpio|InterruptStatus|XmegaInterrupt"></a>XmegaInterrupt</span><span class="attr"> </span></p>
+                <p>Reads back '1' if there is data available to be read from the XMEGA</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>      
+      </div>      
+      <div class="group"><a name="CfgGpio|Config Status"></a><h2 class="group">Config Status</h2>        
+        <div class="register">
+          <a name="CfgGpio|FamReady"></a>          
+          <h3 class="register">Offset 0x0030: FamReady Register (W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('CfgGpio|FamReady_in')">(<span id="show_CfgGpio|FamReady_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_CfgGpio|FamReady_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamReady</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0030</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file ConfigGpio.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..2</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1w</td>
+              <td>
+                <p><span class="name"><a name="CfgGpio|FamReady|ClearReady"></a>ClearReady</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Clears that the FAM is ready</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0w</td>
+              <td>
+                <p><span class="name"><a name="CfgGpio|FamReady|SetReady"></a>SetReady</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Set that the FAM is ready</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="CfgGpio|FamError"></a>          
+          <h3 class="register">Offset 0x0034: FamError Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('CfgGpio|FamError_in')">(<span id="show_CfgGpio|FamError_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_CfgGpio|FamError_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamError</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0034</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file ConfigGpio.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..0</td>
+              <td>
+                <p><span class="name"><a name="CfgGpio|FamError|ErrorCode"></a>ErrorCode</span><span class="attr"> </span></p>
+                <p>Error code for runtime CLIP errors</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>      
+      </div>    
+    </div>    
+    <div class="regmap">
+      <a name="TimingEngine"></a>
+      <h1 class="regmap">TimingEngine</h1>    <p>This regmap has readablestrobes="true", so all strobe bits are readable by
+    default. This attribute should only be used for older regmaps to maintain
+    compatibility with previous versions of XmlParse. New regmaps should either
+    use the 'clearable' attribute or should explicitly define readable bits
+    in the same bit position as the strobe bits.</p>      
+      <div class="group"><a name="TimingEngine|ClockEnables"></a><h2 class="group">ClockEnables</h2>        
+        <div class="register">
+          <a name="TimingEngine|ClockControl"></a>          
+          <h3 class="register">Offset 0x0010: ClockControl Register (W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('TimingEngine|ClockControl_in')">(<span id="show_TimingEngine|ClockControl_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_TimingEngine|ClockControl_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">ClockControl</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0010</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file TimingEngine.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..2</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1w</td>
+              <td>
+                <p><span class="name"><a name="TimingEngine|ClockControl|DisableDataClocks"></a>DisableDataClocks</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Disables the data clocks.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0w</td>
+              <td>
+                <p><span class="name"><a name="TimingEngine|ClockControl|EnableDataClocks"></a>EnableDataClocks</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Enables the data clocks to the FPGA.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="TimingEngine|ClkStatus"></a>          
+          <h3 class="register">Offset 0x0014: ClkStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('TimingEngine|ClkStatus_in')">(<span id="show_TimingEngine|ClkStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_TimingEngine|ClkStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">ClkStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0014</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file TimingEngine.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..1</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="TimingEngine|ClkStatus|LvClockEnable"></a>LvClockEnable</span><span class="attr"> </span></p>
+                <p>Reads 1 if it is safe to enable the clocks.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>      
+      </div>      
+      <div class="group"><a name="TimingEngine|MMCM"></a><h2 class="group">MMCM</h2>        
+        <div class="register">
+          <a name="TimingEngine|PllControl"></a>          
+          <h3 class="register">Offset 0x0000: PllControl Register (W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('TimingEngine|PllControl_in')">(<span id="show_TimingEngine|PllControl_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_TimingEngine|PllControl_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">PllControl</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0000</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file TimingEngine.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..2</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1w</td>
+              <td>
+                <p><span class="name"><a name="TimingEngine|PllControl|ClearPllReset"></a>ClearPllReset</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Removes the reset from the MMCM on the FPGA.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0w</td>
+              <td>
+                <p><span class="name"><a name="TimingEngine|PllControl|SetPllReset"></a>SetPllReset</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Puts the FPGA MMCM in reset. It must be reset if LOCK is lost.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="TimingEngine|PllStatus"></a>          
+          <h3 class="register">Offset 0x0000: PllStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('TimingEngine|PllStatus_in')">(<span id="show_TimingEngine|PllStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_TimingEngine|PllStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">PllStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0000</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file TimingEngine.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..1</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="TimingEngine|PllStatus|PllLocked"></a>PllLocked</span><span class="attr"> </span></p>
+                <p>Reads 1 if the MMCM in the FPGA is locked.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>      
+      </div>    
+    </div>    
+    <div class="regmap">
+      <a name="Jesd204bRegs"></a>
+      <h1 class="regmap">Jesd204bRegs</h1>    <p>This regmap has readablestrobes="true", so all strobe bits are readable by
+    default. This attribute should only be used for older regmaps to maintain
+    compatibility with previous versions of XmlParse. New regmaps should either
+    use the 'clearable' attribute or should explicitly define readable bits
+    in the same bit position as the strobe bits.</p>      
+      <div class="group"><a name="Jesd204bRegs|JESD Clocking and Reset"></a><h2 class="group">JESD Clocking and Reset</h2>        
+        <div class="register">
+          <a name="Jesd204bRegs|GthQpllStatus"></a>          
+          <h3 class="register">Offset 0x0000: GthQpllStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|GthQpllStatus_in')">(<span id="show_Jesd204bRegs|GthQpllStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|GthQpllStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">GthQpllStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0000</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..4</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">3</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|GthQpllStatus|QpllLock"></a>QpllLock</span><span class="attr"> </span></p>
+                <p>This bit is set if all QPLLs are locked.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">2..0</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|GthQpllStickyControl"></a>          
+          <h3 class="register">Offset 0x0004: GthQpllStickyControl Register (W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|GthQpllStickyControl_in')">(<span id="show_Jesd204bRegs|GthQpllStickyControl_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|GthQpllStickyControl_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">GthQpllStickyControl</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0004</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..1</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0w</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|GthQpllStickyControl|ClearQpllStickyStatus"></a>ClearQpllStickyStatus</span><span class="attr"> </span></p>
+                <p>Write a 1 to this bit to clear the QPLL Ref Clock and Unlocked sticky status bits.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|GthQpllStickyStatus"></a>          
+          <h3 class="register">Offset 0x0004: GthQpllStickyStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|GthQpllStickyStatus_in')">(<span id="show_Jesd204bRegs|GthQpllStickyStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|GthQpllStickyStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">GthQpllStickyStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0004</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..2</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|GthQpllStickyStatus|QpllUnlockedSticky"></a>QpllUnlockedSticky</span><span class="attr"> </span></p>
+                <p>This bit is set if any QPLL ever becomes unlocked. It can be cleared by writing any value to this register.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|GthQpllStickyStatus|QpllRefClkLostSticky"></a>QpllRefClkLostSticky</span><span class="attr"> </span></p>
+                <p>This bit is set if any QPLL ever loses it reference. It can be cleared by writing any value to this register.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|JesdClockingControl"></a>          
+          <h3 class="register">Offset 0x0008: JesdClockingControl Register (W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|JesdClockingControl_in')">(<span id="show_Jesd204bRegs|JesdClockingControl_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|JesdClockingControl_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">JesdClockingControl</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0008</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..2</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1w</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdClockingControl|ClrUserClocksStable"></a>ClrUserClocksStable</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Write a '1' to this bit to indicate that the User Clocks are no longer stable.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0w</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdClockingControl|SetUserClocksStable"></a>SetUserClocksStable</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Write a '1' to this bit to indicate that the User Clocks are stable. This is required for the GTH to use them.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|JesdClockingStatus"></a>          
+          <h3 class="register">Offset 0x0008: JesdClockingStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|JesdClockingStatus_in')">(<span id="show_Jesd204bRegs|JesdClockingStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|JesdClockingStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">JesdClockingStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0008</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..1</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdClockingStatus|UserClocksStable"></a>UserClocksStable</span><span class="attr"> </span></p>
+                <p>Reads back '1' if the UserClocksStable is set, '0' if it is cleared.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|GthResetControl"></a>          
+          <h3 class="register">Offset 0x000C: GthResetControl Register (W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|GthResetControl_in')">(<span id="show_Jesd204bRegs|GthResetControl_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|GthResetControl_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">GthResetControl</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x000C</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..2</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+                        <tr  valign="top">
+                          <td class="bits">1w</td>
+                          <td>
+                            <p><span class="name"><a name="Jesd204bRegs|GthResetControl|DeassertGthReset"></a>DeassertGthReset</span><span class="attr"> </span></p>
+                            <p>The GTH transceiver reset should be asserted before re-configuring the clocks and
+            de-asserted after the clocks to the transceiver are stable. Assert this bit to
+            take the GTH transceivers out of reset.</p>            
+              </td>
+            </tr>            
+                        <tr  valign="top">
+                          <td class="bits">0w</td>
+                          <td>
+                            <p><span class="name"><a name="Jesd204bRegs|GthResetControl|AssertGthReset"></a>AssertGthReset</span><span class="attr"> </span></p>
+                            <p>The GTH transceiver reset should be asserted before re-configuring the clocks and
+            de-asserted after the clocks to the transceiver are stable. Assert this bit to
+            put the GTH transceivers in reset.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|GthResetStatus"></a>          
+          <h3 class="register">Offset 0x000C: GthResetStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|GthResetStatus_in')">(<span id="show_Jesd204bRegs|GthResetStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|GthResetStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">GthResetStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x000C</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..3</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">2</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|GthResetStatus|GtRxResetsDone"></a>GtRxResetsDone</span><span class="attr"> </span></p>
+                <p>Reads back '1' if the GTH reset procedure is complete. This is cleared during the next reset.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|GthResetStatus|GthResetActive"></a>GthResetActive</span><span class="attr"> </span></p>
+                <p>Reads back '1' if the GTH reset is asserted.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>      
+      </div>      
+      <div class="group"><a name="Jesd204bRegs|JESD Control and Status"></a><h2 class="group">JESD Control and Status</h2>        
+        <div class="register">
+          <a name="Jesd204bRegs|JesdControl"></a>          
+          <h3 class="register">Offset 0x0010: JesdControl Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|JesdControl_in')">(<span id="show_Jesd204bRegs|JesdControl_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|JesdControl_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">JesdControl</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0010</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..2</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdControl|SkipCharReplacement"></a>SkipCharReplacement</span><span class="attr"> </span></p>
+                <p>Write a '1' to skip character replacement.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdControl|BypassDescrambler"></a>BypassDescrambler</span><span class="attr"> </span></p>
+                <p>Write a '1' to bypass the descrambler.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|JesdSyncControl"></a>          
+          <h3 class="register">Offset 0x0014: JesdSyncControl Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|JesdSyncControl_in')">(<span id="show_Jesd204bRegs|JesdSyncControl_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|JesdSyncControl_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">JesdSyncControl</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0014</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..3</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">2</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdSyncControl|SyncOverrideValue"></a>SyncOverrideValue</span><span class="attr"> </span></p>
+                <p>Write a '1' to set the SYNCb pin high during manual override and a '0' to set it low.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdSyncControl|ClrSyncOverride"></a>ClrSyncOverride</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Write a '1' to disable manual override of the SYNCb pin.</p>            
+            <p>
+              <span class="attr">
+                * Warning - readable strobe bit. This will cause diffculty in
+                software development and is better implemented as a write-only strobe bit
+                with a separate readable bit in the same position.
+              </span>
+            </p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdSyncControl|SetSyncOverride"></a>SetSyncOverride</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Write a '1' to enable manual override of the SYNCb pin.</p>            
+            <p>
+              <span class="attr">
+                * Warning - readable strobe bit. This will cause diffculty in
+                software development and is better implemented as a write-only strobe bit
+                with a separate readable bit in the same position.
+              </span>
+            </p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|JesdSyncStatus"></a>          
+          <h3 class="register">Offset 0x0014: JesdSyncStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|JesdSyncStatus_in')">(<span id="show_Jesd204bRegs|JesdSyncStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|JesdSyncStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">JesdSyncStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0014</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..1</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdSyncStatus|SyncOverrideActive"></a>SyncOverrideActive</span><span class="attr"> </span></p>
+                <p>Reads back '1' if manual override is enabled.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|JesdLaneAlignmentStatusAndControl"></a>          
+          <h3 class="register">Offset 0x0018: JesdLaneAlignmentStatusAndControl Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|JesdLaneAlignmentStatusAndControl_in')">(<span id="show_Jesd204bRegs|JesdLaneAlignmentStatusAndControl_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|JesdLaneAlignmentStatusAndControl_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">JesdLaneAlignmentStatusAndControl</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0018</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..4</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">3</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdLaneAlignmentStatusAndControl|GtRxChanBondingDone"></a>GtRxChanBondingDone</span><span class="attr"> </span></p>
+                <p>Reads back '1' when ILA is complete.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">2</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdLaneAlignmentStatusAndControl|CodeGrpSyncDone"></a>CodeGrpSyncDone</span><span class="attr"> </span></p>
+                <p>Reads back '1' when CGS is complete.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdLaneAlignmentStatusAndControl|ClearLmfc"></a>ClearLmfc</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Write a '1' to this bit to reset the LMFC, and have it realign to SYSREF.</p>            
+            <p>
+              <span class="attr">
+                * Warning - readable strobe bit. This will cause diffculty in
+                software development and is better implemented as a write-only strobe bit
+                with a separate readable bit in the same position.
+              </span>
+            </p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdLaneAlignmentStatusAndControl|StartCodeGroupSync"></a>StartCodeGroupSync</span><span class="attr"> &nbsp;&nbsp;(Strobe)</span></p>
+                <p>Write a '1' to this bit to start the JESD 204b CGS and ILA procedure.</p>            
+            <p>
+              <span class="attr">
+                * Warning - readable strobe bit. This will cause diffculty in
+                software development and is better implemented as a write-only strobe bit
+                with a separate readable bit in the same position.
+              </span>
+            </p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="Jesd204bRegs|JesdErrorStatus"></a>          
+          <h3 class="register">Offset 0x0020: JesdErrorStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('Jesd204bRegs|JesdErrorStatus_in')">(<span id="show_Jesd204bRegs|JesdErrorStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_Jesd204bRegs|JesdErrorStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">JesdErrorStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0020</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file Jesd204bAxiRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..6</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">5</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdErrorStatus|UnExpectedKCharErrorSticky"></a>UnExpectedKCharErrorSticky</span><span class="attr"> </span></p>
+                <p>Reads back '1' if there is an unexpected K character.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">4</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdErrorStatus|AdcCodeGrpSyncRequestSticky"></a>AdcCodeGrpSyncRequestSticky</span><span class="attr"> </span></p>
+                <p>Reads back '1' if there is a CGS request when one is not expected.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">3</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdErrorStatus|LinkMisAlignmentErrorSticky"></a>LinkMisAlignmentErrorSticky</span><span class="attr"> </span></p>
+                <p>Reads back '1' if there is a lane alignment error.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">2</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdErrorStatus|LinkNotInTableErrorSticky"></a>LinkNotInTableErrorSticky</span><span class="attr"> </span></p>
+                <p>Reads back '1' if there is a not in table error.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">1</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdErrorStatus|LinkDispErrorSticky"></a>LinkDispErrorSticky</span><span class="attr"> </span></p>
+                <p>Reads back '1' if there is a disparity error.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="Jesd204bRegs|JesdErrorStatus|LinkErrorSticky"></a>LinkErrorSticky</span><span class="attr"> </span></p>
+                <p>Reads back '1' if any of the following errors are detected.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>      
+      </div>    
+    </div>    
+    <div class="regmap">
+      <a name="StdRegs"></a>
+      <h1 class="regmap">StdRegs</h1>      
+      <div class="group"><a name="StdRegs|Standard Registers"></a><h2 class="group">Standard Registers</h2>        
+        <div class="register">
+          <a name="StdRegs|SignatureReg"></a>          
+          <h3 class="register">Offset 0x0000: SignatureReg Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('StdRegs|SignatureReg_in')">(<span id="show_StdRegs|SignatureReg_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_StdRegs|SignatureReg_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">SignatureReg</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0000</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file StandardRegs.vhd.</p>          
+          </div>          
+          <div class="info">            
+            The Signature register, which reads the value of ExpectedSignature that
+            corresponds to the device.          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..0</td>
+              <td>
+                <p><span class="name"><a name="StdRegs|SignatureReg|SignatureData"></a>SignatureData</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="StdRegs|FpgaBuildDate"></a>          
+          <h3 class="register">Offset 0x0004: FpgaBuildDate Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('StdRegs|FpgaBuildDate_in')">(<span id="show_StdRegs|FpgaBuildDate_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_StdRegs|FpgaBuildDate_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FpgaBuildDate</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0004</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file StandardRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+                        <tr  valign="top">
+                          <td class="bits">31..0</td>
+                          <td>
+                            <p><span class="name"><a name="StdRegs|FpgaBuildDate|BuildDate"></a>BuildDate</span><span class="attr"> </span></p>
+                            <p>The FPGA build date in the format 0xYYMMDDHH.<BR>
+            FpgaBuildDate: 0x18052309</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="StdRegs|OldestCompatReg"></a>          
+          <h3 class="register">Offset 0x0008: OldestCompatReg Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('StdRegs|OldestCompatReg_in')">(<span id="show_StdRegs|OldestCompatReg_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_StdRegs|OldestCompatReg_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">OldestCompatReg</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0008</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file StandardRegs.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Specifies the oldest Revision Register value for which the
+            current register map is still compatible.          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+                        <tr  valign="top">
+                          <td class="bits">31..0</td>
+                          <td>
+                            <p><span class="name"><a name="StdRegs|OldestCompatReg|OldestCompatData"></a>OldestCompatData</span><span class="attr"> </span></p>
+                            <p>OldestCompat is a BCD formatted build date which indicates the oldest FPGA
+            version that had a register set compatible with the current version. This
+            allows software that is older than this version of the FPGA to decide if it
+            can correctly control the FPGA. If the driver software was designed for any
+            FPGA build date equal to or later than the oldest compatible date, the
+            software should operate correctly on this FPGA. If the driver software was
+            designed for any FPGA build date prior to the oldest compatible date, the
+            software should terminate with a useful incompatibility message. <BR>
+            Typically, the current version of the register map must be a strict superset
+            of its oldest compatible build date and the new features must be optional.
+            In some cases, a design update might make a writable register optional. In
+            that case old software might write a non-existent register but if the new
+            FPGA still operates correctly, it could maintain the same oldest compatible
+            date. <BR> The OldestCompatData returns the date in the format: 0xYYMMDDHH
+            <BR> OldestCompatData: 0x18052309</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="StdRegs|Scratch"></a>          
+          <h3 class="register">Offset 0x000C: Scratch Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('StdRegs|Scratch_in')">(<span id="show_StdRegs|Scratch_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_StdRegs|Scratch_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">Scratch</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x000C</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file StandardRegs.vhd.</p>          
+          </div>          
+          <div class="info">            
+            A read/write register with no other function.          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..0</td>
+              <td>
+                <p><span class="name"><a name="StdRegs|Scratch|ScratchData"></a>ScratchData</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>      
+      </div>    
+    </div>    
+    <div class="regmap">
+      <a name="IoSocketAxiBridgeRegs"></a>
+      <h1 class="regmap">IoSocketAxiBridgeRegs</h1>      
+      <div class="group"><a name="IoSocketAxiBridgeRegs|Regmap Organization"></a><h2 class="group">Regmap Organization</h2>        This regmap implements a reset-domain-crossing interface between the Fixed Logic
+        (FL) MicroBlaze (uB) and the Io Module CLIP (CLIP). The registers are
+        implemented in 3 general categories:
+        <ol><li><b>FixedLogicToClipRam</b> - Communicates data from the FL uB to the
+        CLIP via a memory element.</li>
+        <li><b>ClipToFixedLogicRegs</b> - Communicates data from the CLIP to the FL
+        uB.</li>
+        <li><b>BridgeSharedKnowledge</b> - Communicates data from elsewhere in the board
+        to both the FL uB and the CLIP.</li></ol>
+        <p> The register ranges for each of these categories are defined in
+        AxiBridgeRangesEnum.</p>        
+        <div class="enum">
+          <a name="IoSocketAxiBridgeRegs|AxiBridgeRangesEnum"></a>          
+          <h3 class="enum">AxiBridgeRangesEnum Enumeration</h3>          
+          <table class="enum" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header" valign="center">              
+              <td class='value' colspan='2'> Value </td>
+              <td class="l"  rowspan='2' colspan='1'> Name </td>            
+            </tr>            
+            <tr class="header2" valign="bottom">              
+              <td class='value'> Dec </td>              
+              <td class='l'> Hex </td>            
+            </tr>            
+            <tr valign="top">              
+              <td class='value'>0</td>              
+              <td class='l'>0x000</td>              
+              <td class="l" style="text-align: left;">
+                <p class="name"><a name='IoSocketAxiBridgeRegs|AxiBridgeRangesEnum|FlToClipRamStart'></a>FlToClipRamStart</p>              
+              </td>            
+            </tr>            
+            <tr valign="top">              
+              <td class='value'>124</td>              
+              <td class='l'>0x07C</td>              
+              <td class="l" style="text-align: left;">
+                <p class="name"><a name='IoSocketAxiBridgeRegs|AxiBridgeRangesEnum|FlToClipRamLast'></a>FlToClipRamLast</p>              
+              </td>            
+            </tr>            
+            <tr valign="top">              
+              <td class='value'>128</td>              
+              <td class='l'>0x080</td>              
+              <td class="l" style="text-align: left;">
+                <p class="name"><a name='IoSocketAxiBridgeRegs|AxiBridgeRangesEnum|ClipToFlRegsStart'></a>ClipToFlRegsStart</p>              
+              </td>            
+            </tr>            
+            <tr valign="top">              
+              <td class='value'>252</td>              
+              <td class='l'>0x0FC</td>              
+              <td class="l" style="text-align: left;">
+                <p class="name"><a name='IoSocketAxiBridgeRegs|AxiBridgeRangesEnum|ClipToFlRegsLast'></a>ClipToFlRegsLast</p>              
+              </td>            
+            </tr>            
+            <tr valign="top">              
+              <td class='value'>256</td>              
+              <td class='l'>0x100</td>              
+              <td class="l" style="text-align: left;">
+                <p class="name"><a name='IoSocketAxiBridgeRegs|AxiBridgeRangesEnum|BridgeSharedStart'></a>BridgeSharedStart</p>              
+              </td>            
+            </tr>            
+            <tr valign="top">              
+              <td class='value'>380</td>              
+              <td class='l'>0x17C</td>              
+              <td class="l" style="text-align: left;">
+                <p class="name"><a name='IoSocketAxiBridgeRegs|AxiBridgeRangesEnum|BridgeSharedLast'></a>BridgeSharedLast</p>              
+              </td>            
+            </tr>          
+          </table>          
+          <p class="enum_info">
+            This enumerated type is defined in HDL source file IoSocketAxiBridge.vhd.
+          </p>        
+        </div>      
+      </div>      
+      <div class="group"><a name="IoSocketAxiBridgeRegs|FixedLogicToClipRam"></a><h2 class="group">FixedLogicToClipRam</h2>        <p> These registers are implemented in a LUT RAM driven by the FixedLogic. They
+        persist reset and are used to pass semi-constant or information that is rarely
+        updated to the CLIP. Despite these registers being marked as read/write, they are
+        Read-Only for the Clip, and write-only for the FixedLogic.</p>
+        <p> The address range for this group is from defined in AxiBridgeRangesEnum</p>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamSerialNumber"></a>          
+          <h3 class="register">Offset 0x0000: FamSerialNumber Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamSerialNumber_in')">(<span id="show_IoSocketAxiBridgeRegs|FamSerialNumber_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamSerialNumber_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamSerialNumber</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0000</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            FAM Serial number as read from the EEPROM.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamHwInformation"></a>          
+          <h3 class="register">Offset 0x0004: FamHwInformation Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamHwInformation_in')">(<span id="show_IoSocketAxiBridgeRegs|FamHwInformation_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamHwInformation_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamHwInformation</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0004</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            FAM HW Information to identify FAM HW variants and FAM HW Revision.          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..16</td>
+              <td>
+                <p><span class="name"><a name="IoSocketAxiBridgeRegs|FamHwInformation|FamHwVariant"></a>FamHwVariant</span><span class="attr"> </span></p>
+                <p>FAM HW Variant as read from the EEPROM.</p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..0</td>
+              <td>
+                <p><span class="name"><a name="IoSocketAxiBridgeRegs|FamHwInformation|FamHwRevision"></a>FamHwRevision</span><span class="attr"> </span></p>
+                <p>FAM HW revision as read from the EEPROM.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamID"></a>          
+          <h3 class="register">Offset 0x0008: FamID Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamID_in')">(<span id="show_IoSocketAxiBridgeRegs|FamID_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamID_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamID</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0008</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            This register contains the FAM VID and PID as read from the
+            EEPROM.          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..16</td>
+              <td>
+                <p><span class="name"><a name="IoSocketAxiBridgeRegs|FamID|FamVendorID"></a>FamVendorID</span><span class="attr"> </span></p>
+                <p>Vendor ID assigned by NI to a manufacturer.</p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..0</td>
+              <td>
+                <p><span class="name"><a name="IoSocketAxiBridgeRegs|FamID|FamProductID"></a>FamProductID</span><span class="attr"> </span></p>
+                <p>Product ID assigned by the Vendor.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamPower12v"></a>          
+          <h3 class="register">Offset 0x0010: FamPower12v Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamPower12v_in')">(<span id="show_IoSocketAxiBridgeRegs|FamPower12v_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamPower12v_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamPower12v</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0010</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            FAM power consumption off the 12v rail in mW. If 0, this measurement is not
+            supported by the carrier.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamPower1v8"></a>          
+          <h3 class="register">Offset 0x0014: FamPower1v8 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamPower1v8_in')">(<span id="show_IoSocketAxiBridgeRegs|FamPower1v8_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamPower1v8_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamPower1v8</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0014</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            FAM power consumption off the 1v8 rail in mW. If 0, this measurement is not
+            supported by the carrier.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamSensorValue1"></a>          
+          <h3 class="register">Offset 0x0018: FamSensorValue1 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamSensorValue1_in')">(<span id="show_IoSocketAxiBridgeRegs|FamSensorValue1_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamSensorValue1_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamSensorValue1</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0018</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Value read from a sensor found on the I2C FAM interface.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamSensorValue2"></a>          
+          <h3 class="register">Offset 0x001C: FamSensorValue2 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamSensorValue2_in')">(<span id="show_IoSocketAxiBridgeRegs|FamSensorValue2_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamSensorValue2_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamSensorValue2</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x001C</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Value read from a sensor found on the I2C FAM interface.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamSensorValue3"></a>          
+          <h3 class="register">Offset 0x0020: FamSensorValue3 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamSensorValue3_in')">(<span id="show_IoSocketAxiBridgeRegs|FamSensorValue3_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamSensorValue3_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamSensorValue3</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0020</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Value read from a sensor found on the I2C FAM interface.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamSensorValue4"></a>          
+          <h3 class="register">Offset 0x0024: FamSensorValue4 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamSensorValue4_in')">(<span id="show_IoSocketAxiBridgeRegs|FamSensorValue4_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamSensorValue4_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamSensorValue4</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0024</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Value read from a sensor found on the I2C FAM interface.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamSensorValue5"></a>          
+          <h3 class="register">Offset 0x0028: FamSensorValue5 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamSensorValue5_in')">(<span id="show_IoSocketAxiBridgeRegs|FamSensorValue5_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamSensorValue5_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamSensorValue5</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0028</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Value read from a sensor found on the I2C FAM interface.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamSensorValue6"></a>          
+          <h3 class="register">Offset 0x002C: FamSensorValue6 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamSensorValue6_in')">(<span id="show_IoSocketAxiBridgeRegs|FamSensorValue6_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamSensorValue6_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamSensorValue6</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x002C</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Value read from a sensor found on the I2C FAM interface.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamSensorValue7"></a>          
+          <h3 class="register">Offset 0x0030: FamSensorValue7 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamSensorValue7_in')">(<span id="show_IoSocketAxiBridgeRegs|FamSensorValue7_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamSensorValue7_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamSensorValue7</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0030</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Value read from a sensor found on the I2C FAM interface.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamSensorValue8"></a>          
+          <h3 class="register">Offset 0x0034: FamSensorValue8 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamSensorValue8_in')">(<span id="show_IoSocketAxiBridgeRegs|FamSensorValue8_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamSensorValue8_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamSensorValue8</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0034</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Value read from a sensor found on the I2C FAM interface.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|CarrierSerialNumber"></a>          
+          <h3 class="register">Offset 0x0040: CarrierSerialNumber Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|CarrierSerialNumber_in')">(<span id="show_IoSocketAxiBridgeRegs|CarrierSerialNumber_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|CarrierSerialNumber_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">CarrierSerialNumber</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0040</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Carrier Serial Number.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|CarrierInformation"></a>          
+          <h3 class="register">Offset 0x0044: CarrierInformation Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|CarrierInformation_in')">(<span id="show_IoSocketAxiBridgeRegs|CarrierInformation_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|CarrierInformation_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">CarrierInformation</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0044</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            This Register contains the information required to identify
+            the carrier type and hardware revision.          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name"><a name="IoSocketAxiBridgeRegs|CarrierInformation|HardwareRevision"></a>HardwareRevision</span><span class="attr"> </span></p>
+                <p>This field is used to identify the HW revision of the carrier.</p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..20</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">19..16</td>
+              <td>
+                <p><span class="name"><a name="IoSocketAxiBridgeRegs|CarrierInformation|CarrierPlatform"></a>CarrierPlatform</span><span class="attr"> </span></p>
+                <p>This field is used to identify the platform.</p>                
+                <p>
+                  The values for this bitfield are in the CarrierPlatformEnum table.
+                  <a class="sh_enum" href="javascript:sb('IoSocketAxiBridgeRegs|CarrierInformation|CarrierPlatform')">(<span id="show_IoSocketAxiBridgeRegs|CarrierInformation|CarrierPlatform">show here</span>)</a>
+                </p>
+                <div class="sh_enum" id="div_IoSocketAxiBridgeRegs|CarrierInformation|CarrierPlatform">                  
+                  <div class="enum">
+                    <a name="IoSocketAxiBridgeRegs|CarrierInformation|CarrierPlatform|CarrierPlatformEnum"></a>                    
+                    <table class="enum" border="0" cellspacing="0" cellpadding="0">
+                      <tr class="header" valign="center">                        
+                        <td class='value' > Value </td>
+                        <td class="l"   colspan='1'> Name </td>                      
+                      </tr>                      
+                      <tr valign="top">                        
+                        <td class='value'>1</td>                        
+                        <td class="l" style="text-align: left;">
+                          <p class="name"><a name='IoSocketAxiBridgeRegs|CarrierInformation|CarrierPlatform|CarrierPlatformEnum|Platform_PXIe'></a>Platform_PXIe</p>                        
+                        </td>                      
+                      </tr>                      
+                      <tr valign="top">                        
+                        <td class='value'>2</td>                        
+                        <td class="l" style="text-align: left;">
+                          <p class="name"><a name='IoSocketAxiBridgeRegs|CarrierInformation|CarrierPlatform|CarrierPlatformEnum|Platform_PCIe'></a>Platform_PCIe</p>                        
+                        </td>                      
+                      </tr>                    
+                    </table>                    
+                    <p class="enum_info">
+                      This enumerated type is defined in HDL source file FixedLogicToClipRam.vhd.
+                    </p>                  
+                  </div>                
+                </div>            
+              </td>
+            </tr>            
+                        <tr class='byte' valign="top">
+                          <td class="bits">15..0</td>
+                          <td>
+                            <p><span class="name"><a name="IoSocketAxiBridgeRegs|CarrierInformation|CarrierId"></a>CarrierId</span><span class="attr"> </span></p>
+                            <p>This field is used to fully identify the carrier.
+            (i.e. Macallan, Appleton, Garrison...)</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|CarrierPower12v"></a>          
+          <h3 class="register">Offset 0x0050: CarrierPower12v Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|CarrierPower12v_in')">(<span id="show_IoSocketAxiBridgeRegs|CarrierPower12v_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|CarrierPower12v_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">CarrierPower12v</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0050</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Carrier 12v power consumption, in mW.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|CarrierPower3v3"></a>          
+          <h3 class="register">Offset 0x0054: CarrierPower3v3 Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|CarrierPower3v3_in')">(<span id="show_IoSocketAxiBridgeRegs|CarrierPower3v3_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|CarrierPower3v3_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">CarrierPower3v3</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0054</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Carrier 12v power consumption, in mW.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|CarrierTemperature"></a>          
+          <h3 class="register">Offset 0x0058: CarrierTemperature Register (R|W)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|CarrierTemperature_in')">(<span id="show_IoSocketAxiBridgeRegs|CarrierTemperature_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|CarrierTemperature_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">CarrierTemperature</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0058</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file FixedLogicToClipRam.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Carrier temperature, in 1/100 of a deg C.          
+          </div>        
+        </div>      
+      </div>      
+      <div class="group"><a name="IoSocketAxiBridgeRegs|ClipToFixedLogicRegs"></a><h2 class="group">ClipToFixedLogicRegs</h2>        <p> The content of these registers is provided by the FAM CLIP and read by the
+        Fixed Logic. Although marked as "Read-Write", these registers are read-only for
+        the Fixed Logic.</p>
+        <p> The memory space reserved for these registers is defined in
+        AxiBridgeRangesEnum</p>
+        <p><b> This part of the RegMap is reserved for later use (empty)</b> </p>      
+      </div>      
+      <div class="group"><a name="IoSocketAxiBridgeRegs|BridgeSharedKnowledge"></a><h2 class="group">BridgeSharedKnowledge</h2>        <p> These registers are readable from both the CLIP and the Fixed Logic. They
+        represent status that is relevant to both, but controlled by neither.</p>
+        <p> The address range for this group is defined in AxiBridgeRangesEnum.</p>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|ExpectedFamId"></a>          
+          <h3 class="register">Offset 0x0104: ExpectedFamId Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|ExpectedFamId_in')">(<span id="show_IoSocketAxiBridgeRegs|ExpectedFamId_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|ExpectedFamId_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">ExpectedFamId</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0104</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file CommonKnowledgeRegs.vhd.</p>          
+          </div>          
+          <div class="info">            
+            Expected FAM ID on the Compiled Bitfile.          
+          </div>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|FamStatus"></a>          
+          <h3 class="register">Offset 0x0108: FamStatus Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|FamStatus_in')">(<span id="show_IoSocketAxiBridgeRegs|FamStatus_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|FamStatus_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">FamStatus</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0108</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file CommonKnowledgeRegs.vhd.</p>          
+          </div>          
+          <div class="info">            
+            This register contains several status bits of the FAM interface
+            might be of interest to the CLIP.          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..4</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">3</td>
+              <td>
+                <p><span class="name"><a name="IoSocketAxiBridgeRegs|FamStatus|FamOutputsEnabled"></a>FamOutputsEnabled</span><span class="attr"> </span></p>
+                <p>Indicates whether the output buffers of the FAM are enabled.</p>            
+              </td>
+            </tr>            
+                        <tr  valign="top">
+                          <td class="bits">2</td>
+                          <td>
+                            <p><span class="name"><a name="IoSocketAxiBridgeRegs|FamStatus|FamPowerGood"></a>FamPowerGood</span><span class="attr"> </span></p>
+                            <p>Indicates whether the carrier has detected the power good/ready signal from the
+            FAM.</p>            
+              </td>
+            </tr>            
+                        <tr  valign="top">
+                          <td class="bits">1</td>
+                          <td>
+                            <p><span class="name"><a name="IoSocketAxiBridgeRegs|FamStatus|FamPowerEnabled"></a>FamPowerEnabled</span><span class="attr"> </span></p>
+                            <p>Indicates whether power is enabled for the FAM. For some carriers, this will
+            always be true.</p>            
+              </td>
+            </tr>            
+            <tr  valign="top">
+              <td class="bits">0</td>
+              <td>
+                <p><span class="name"><a name="IoSocketAxiBridgeRegs|FamStatus|FamPresent"></a>FamPresent</span><span class="attr"> </span></p>
+                <p>Indicates whether a FAM is present or not.</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>        
+        <div class="register">
+          <a name="IoSocketAxiBridgeRegs|ClipCapabilities"></a>          
+          <h3 class="register">Offset 0x0110: ClipCapabilities Register (R)</h3>
+          </h3>          
+          <a class="sh_addrs" href="javascript:sa('IoSocketAxiBridgeRegs|ClipCapabilities_in')">(<span id="show_IoSocketAxiBridgeRegs|ClipCapabilities_in">show</span> extended info)</a>
+          <div class="sh_addrs" id="div_IoSocketAxiBridgeRegs|ClipCapabilities_in">            
+            <table class="extended_info">              
+              <tr>                
+                <td class="outercell" rowspan="1">                  
+                  <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><td class="offset_info" align="right">ClipCapabilities</td></tr>
+                    <tr><td class="offset_info" align="right">&nbsp;&nbsp;offset=0x0110</td></tr>
+                  </table>                
+                </td>              
+              </tr>            
+            </table><p/>          
+          <p class="reg_info">Initial Value not specified
+          </p>          
+          <p class="reg_info">This register is defined in HDL source file CommonKnowledgeRegs.vhd.</p>          
+          </div>          
+          <div class="info">          
+          </div>          
+          <table class="bitfields" border="0" cellspacing="0" cellpadding="0">
+            <tr class="header"><td class="bits">Bits</td><td>Name</td></tr>            
+            <tr  valign="top">
+              <td class="bits">31..24</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">23..16</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">15..8</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+            <tr class='byte' valign="top">
+              <td class="bits">7..1</td>
+              <td>
+                <p><span class="name">Reserved</span><span class="attr"> </span></p>
+                <p></p>            
+              </td>
+            </tr>            
+                        <tr  valign="top">
+                          <td class="bits">0</td>
+                          <td>
+                            <p><span class="name"><a name="IoSocketAxiBridgeRegs|ClipCapabilities|FamSupportsFRAGLs"></a>FamSupportsFRAGLs</span><span class="attr"> </span></p>
+                            <p>Indicates that the CLIP reports it's compatible with FRAGLs (i.e. the NI
+            IFifo firmware and command structure).</p>            
+              </td>
+            </tr>          
+          </table>        
+        </div>      
+      </div>    
+    </div>
+  </body>
+</HTML>

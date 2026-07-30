@@ -1,0 +1,45 @@
+[Common]
+FormatVersion=3
+OldestCompatibleFormatVersion=3
+Manufacturer=National Instruments
+Model=NI 1486-03
+ModelPrettyName=NI 1486 4 In 4 Out
+Description=4 Input 4 Output FPD-Link III Module
+IoModuleID=0x10937A84
+CompatibleCLIPSockets=FlexRIOIoSocketType4_v1
+ConditionalDisableSymbols=MODEL_ALIAS,1486_4I_4O;NUM_SI_CHANS,4;NUM_SO_CHANS,4;DATAPATH_SIZE,32;
+
+[FlexRIOIoSocketType4_v1]
+DefaultCLIP=NI 1486 4 In 4 Out CLIP
+SupportedIoModRefClocks=CLK100
+DefaultIoModRefClock=CLK100
+
+[FlexRIOIoSocketType4_v1 Vivado Constraints]
+File=NI1486_03.xdc
+
+[PortDirectionMapping]
+GPIO{0..3}=in
+GPIO4=out
+GPIO{5..7}=in
+GPIO8=out
+GPIO{9..10}=in
+GPIO{11..12}=out
+GPIO13=in
+GPIO14=out
+GPIO15=in
+GPIO16=out
+GPIO17=in
+GPIO{18..22}=out
+GPIO23=in
+GPIO{24..25}=out
+GPIO{26..30}=in
+GPIO31=out
+GPIO{32..33}=in
+GPIO{34..35}=out
+GPIO{36..38}=in
+GPIO39=out
+GPIO40=in
+GPIO41=out
+GPIO42=in
+GPIO{43..44}=out
+GPIO45=in
