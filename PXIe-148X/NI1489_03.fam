@@ -1,0 +1,45 @@
+[Common]
+FormatVersion=3
+OldestCompatibleFormatVersion=3
+Manufacturer=National Instruments
+Model=NI 1489-03
+ModelPrettyName=NI 1489 2 In 2 Out
+Description=2 Input 2 Output GSML3 Module
+IoModuleID=0x10937AE9
+CompatibleCLIPSockets=FlexRIOIoSocketType4_v1
+ConditionalDisableSymbols=MODEL_ALIAS,1489_2I_2O;NUM_SI_CHANS,2;NUM_SO_CHANS,2;DATAPATH_SIZE,64;
+
+[FlexRIOIoSocketType4_v1]
+DefaultCLIP=NI 1489 2 In 2 Out CLIP
+SupportedIoModRefClocks=CLK100
+DefaultIoModRefClock=CLK100
+
+[FlexRIOIoSocketType4_v1 Vivado Constraints]
+File=NI1489_03.xdc
+
+[PortDirectionMapping]
+GPIO{0..3}=in
+GPIO4=out
+GPIO{5..7}=in
+GPIO8=out
+GPIO{9..10}=in
+GPIO{11..12}=out
+GPIO13=in
+GPIO14=out
+GPIO15=in
+GPIO16=out
+GPIO17=in
+GPIO{18..22}=out
+GPIO23=in
+GPIO{24..25}=out
+GPIO{26..30}=in
+GPIO31=out
+GPIO{32..33}=in
+GPIO{34..35}=out
+GPIO{36..38}=in
+GPIO39=out
+GPIO40=in
+GPIO41=out
+GPIO42=in
+GPIO{43..44}=out
+GPIO45=in
